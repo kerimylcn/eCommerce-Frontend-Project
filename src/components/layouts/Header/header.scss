@@ -1,0 +1,51 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 0.5em 5em 0.2em 5em;
+  background: white;
+  &__logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &--text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.4em;
+      margin-left: 10px;
+
+      span:first-of-type {
+        font-size: 31px;
+        font-weight: bold;
+        letter-spacing: 8px;
+        color: rgba(1, 24, 71, 255);
+        text-align: left;
+      }
+
+      span:last-of-type {
+        font-size: 18px;
+        font-weight: normal;
+        color: #84bc22;
+        text-align: left;
+      }
+    }
+  }
+
+  &__icons {
+    display: flex;
+    list-style: none;
+
+    li {
+      padding-right: 2em;
+      fill: white;
+      &:last-child {
+        padding: 0;
+      }
+
+      svg {
+        opacity: 0.7;
+      }
+    }
+  }
+}

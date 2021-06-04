@@ -1,0 +1,39 @@
+.navigation {
+  &__list {
+    display: flex;
+    list-style: none;
+
+    &--item {
+      font-size: 14px;
+      font-weight: 500;
+      color: #262a32;
+      padding-right: 2em;
+      cursor: pointer;
+
+      &:nth-child(5) {
+        color: rgb(189, 195, 199);
+        padding-left: 1.5em;
+      }
+
+      &:nth-child(6) {
+        color: rgb(189, 195, 199);
+        padding-left: 1.5em;
+      }
+
+      &:nth-child(1)::after {
+        content: url(../../../assets/icons/ArrowDown.svg);
+        padding-left: 1.5em;
+      }
+
+      &:nth-child(5)::after {
+        content: url(../../../assets/icons/ArrowDown.svg);
+        padding-left: 0.5em;
+      }
+
+      &:nth-child(6)::after {
+        content: url(../../../assets/icons/ArrowDown.svg);
+        padding-left: 0.5em;
+      }
+    }
+  }
+}
