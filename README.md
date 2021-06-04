@@ -1,3 +1,4 @@
+
 # eCommerce Frontend Project for OSF Academy
 
 An eCommerce Frontend Project that given as task by OSF Academy Instructors.
@@ -15,39 +16,33 @@ An eCommerce Frontend Project that given as task by OSF Academy Instructors.
 
 > checked todos are done.
 
-- [ ] GLOBAL ELEMENTS
-
+- [ ] **GLOBAL ELEMENTS**
   - [ ] Header
   - [ ] Navigation
   - [ ] Navigation on Mobile
   - [ ] Footer
 
-- [ ] PRODUCTION TILE
-
+- [ ] **PRODUCTION TILE**
   - [ ] Production Tile 1
   - [ ] Production Tile 2
   - [ ] Production Tile 3
   - [ ] Production Tile 4
 
-- [ ] HOMEPAGE
-
+- [ ] **HOMEPAGE**
   - [ ] Breadcrumbs
   - [ ] Filters
 
-- [ ] PRODUCT DETAILED PAGE
-
+- [ ] **PRODUCT DETAILED PAGE**
   - [ ] Product Image
   - [ ] Product Details
   - [ ] Tabs
 
-- [ ] NON-PRODUCT PAGES
-
+- [ ] **NON-PRODUCT PAGES**
   - [ ] 404 Page
   - [ ] Log in Dialog
   - [ ] Cookies Policy
 
-- [ ] BONUS TASKS
-
+- [ ] **BONUS TASKS**
   - [ ] Countdown page
   - [ ] Cart Page
   - [ ] Print Page
