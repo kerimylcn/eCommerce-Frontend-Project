@@ -1,14 +1,11 @@
-import { useAppContext } from "../../../context/state";
-
 import Navigation from "../../shared-components/Navigation";
-
+import DropDown from "../../shared-components/DropDown";
 import Logo from "../../../assets/images/logo.png";
 import { Search, User, Heart, Bag } from "../../../assets/icons/SVG";
 
 import "./header.scss";
 
 const Header = () => {
-  const state = useAppContext();
   return (
     <>
       <header className="header">
@@ -21,21 +18,21 @@ const Header = () => {
         </div>
         <Navigation />
         <ul className="header__icons">
-          <li>
+          <li className="header__icons--item">
             <Search />
           </li>
-          <li>
+          <li className="header__icons--item">
             <User />
           </li>
-          <li>
+          <li className="header__icons--item">
             <Heart />
           </li>
-          <li>
+          <li className="header__icons--item">
             <Bag />
           </li>
         </ul>
       </header>
-      <ul>{state.isDropDown ? "dropdownacik" : "dropdownkapali"}</ul>
+      <DropDown />
     </>
   );
 };
