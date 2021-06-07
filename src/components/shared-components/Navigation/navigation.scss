@@ -11,38 +11,27 @@
     &--item {
       font-size: 14px;
       font-weight: 500;
+      padding: 1.5em 0.5em 2em 0.5em;
+      margin-right: 2em;
       color: #262a32;
       cursor: pointer;
-      margin-right: 2em;
-      padding: 1.5em 0.5em 2em 0.5em;
       transition: all 0.3s ease-in-out;
 
       &:nth-child(1) {
+        padding-left: 1.5rem;
         border-bottom: 2px solid rgba(132, 188, 34, 0);
       }
-      &:nth-child(5) {
-        color: rgb(189, 195, 199);
-        padding-left: 1.5em;
-      }
-
+      &:nth-child(5),
       &:nth-child(6) {
         color: rgb(189, 195, 199);
         padding-left: 1.5em;
       }
 
-      &:nth-child(1)::after {
-        content: url(../../../assets/icons/ArrowDown.svg);
-        padding-left: 1.5em;
-      }
-
-      &:nth-child(5)::after {
-        content: url(../../../assets/icons/ArrowDown.svg);
-        padding-left: 0.5em;
-      }
-
+      &:nth-child(1)::after,
+      &:nth-child(5)::after,
       &:nth-child(6)::after {
         content: url(../../../assets/icons/ArrowDown.svg);
-        padding-left: 0.5em;
+        padding-left: 1.5em;
       }
 
       &:hover {

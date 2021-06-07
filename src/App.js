@@ -1,11 +1,14 @@
-import "./App.scss";
+import { AppWrapper } from "./context/state";
 import Header from "./components/layouts/Header";
+import "./App.scss";
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-    </div>
+    <AppWrapper>
+      <div className="App">
+        <Header />
+      </div>
+    </AppWrapper>
   );
 }
 
