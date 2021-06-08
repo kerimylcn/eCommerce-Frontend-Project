@@ -3,7 +3,8 @@ body {
   font-family: "Lato", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #262a32;
+  background: white;
+  /* background: #262a32; */
 }
 
 code {

@@ -1,8 +1,19 @@
 .dropdown {
-  &--active {
-    display: block;
-  }
   &--off {
     display: none;
+  }
+  &--active {
+    padding: 0;
+    background: #262a32;
+
+    .dropdown__list {
+      display: flex;
+      flex-direction: column;
+
+      &--sub {
+        display: flex;
+        flex-direction: row;
+      }
+    }
   }
 }
