@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useAppContext } from "../../../context/state";
+import DropdownImage from "../../../assets/images/dropdownitem.png";
 import "./dropdown.scss";
 
 const DropDown = () => {
@@ -69,6 +70,12 @@ const DropDown = () => {
           </ul>
         </div>
       </div>
+      <img
+        id="DropDownImage"
+        height="273px"
+        width="278px"
+        src={DropdownImage}
+      />
     </ul>
   );
 };
