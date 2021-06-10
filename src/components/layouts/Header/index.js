@@ -32,7 +32,7 @@ const Header = () => {
           </li>
         </ul>
       </header>
-      <DropDown />
+      {/* <DropDown /> */}
     </>
   );
 };
