@@ -2,7 +2,7 @@
   display: flex;
   position: relative;
   justify-content: space-between;
-  padding: 0 3rem;
+  padding: 0 4rem;
   background: white;
   border-bottom: 1px solid rgba($color: #262a32, $alpha: 0.1);
 
@@ -36,6 +36,7 @@
 
   &__icons {
     display: flex;
+    padding-right: 1.8rem;
     list-style: none;
     cursor: pointer;
 

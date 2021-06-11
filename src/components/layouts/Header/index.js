@@ -1,5 +1,4 @@
 import Navigation from "../../shared-components/Navigation";
-import DropDown from "../../shared-components/DropDown";
 import Logo from "../../../assets/images/logo.png";
 import { Search, User, Heart, Bag } from "../../../assets/icons/SVG";
 
@@ -24,15 +23,14 @@ const Header = () => {
           <li className="header__icons--item">
             <User />
           </li>
-          <li className="header__icons--item">
+          <li className="header__icons--item--fav">
             <Heart />
           </li>
-          <li className="header__icons--item">
+          <li className="header__icons--item--cart">
             <Bag />
           </li>
         </ul>
       </header>
-      {/* <DropDown /> */}
     </>
   );
 };
