@@ -1,12 +1,11 @@
+//768px view should done
 //all links should redirect to 404 PAGE
 
-import { useAppContext } from "../../../context/state";
 import Image from "../../../assets/images/dropdownitem.png";
 
 import "./navigation.scss";
 
 const Navigation = () => {
-  const state = useAppContext();
   const services = {
     ProductCategories: [
       "Accesories",
@@ -49,10 +48,7 @@ const Navigation = () => {
   return (
     <nav className="navigation">
       <ul className="navigation__list">
-        <li
-          className="navigation__list--item"
-          onClick={() => state.onClickHandler()}
-        >
+        <li className="navigation__list--item">
           <span>SERVICES</span>
           <div className="navigation__list--item__services">
             <ul className="navigation__list--item__services__container">

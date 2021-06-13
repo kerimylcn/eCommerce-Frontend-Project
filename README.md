@@ -19,7 +19,7 @@ An eCommerce Frontend Project that given as task by OSF Academy Instructors.
 - [ ] **GLOBAL ELEMENTS**
 
   - [ ] Header
-  - [ ] Navigation
+  - [x] Navigation
   - [ ] Navigation on Mobile
   - [ ] Footer
 

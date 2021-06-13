@@ -3,15 +3,14 @@ import { createContext, useContext, useState } from "react";
 const AppContext = createContext();
 
 export function AppWrapper({ children }) {
-  const [isDropDown, setIsDropDown] = useState(false);
-
-  const onClickHandler = () => {
-    setIsDropDown(!isDropDown);
-  };
+  const [favorites, setFavorites] = useState(["test", "product"]);
+  const [cart, setCart] = useState(["test"]);
 
   let sharedState = {
-    isDropDown,
-    onClickHandler,
+    favorites,
+    setFavorites,
+    cart,
+    setCart,
   };
 
   return (

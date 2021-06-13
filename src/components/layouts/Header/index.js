@@ -1,10 +1,13 @@
 import Navigation from "../../shared-components/Navigation";
 import Logo from "../../../assets/images/logo.png";
 import { Search, User, Heart, Bag } from "../../../assets/icons/SVG";
+import { useAppContext } from "../../../context/state";
 
 import "./header.scss";
 
 const Header = () => {
+  const state = useAppContext();
+
   return (
     <>
       <header className="header">
@@ -25,9 +28,15 @@ const Header = () => {
           </li>
           <li className="header__icons--item--fav">
             <Heart />
+            <div className="header__icons--item--badge">
+              {state.favorites.length}
+            </div>
           </li>
           <li className="header__icons--item--cart">
             <Bag />
+            <div className="header__icons--item--badge">
+              {state.cart.length}
+            </div>
           </li>
         </ul>
       </header>
