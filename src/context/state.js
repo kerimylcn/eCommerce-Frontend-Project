@@ -10,6 +10,18 @@ export function AppWrapper({ children }) {
 
   const hamburgerHandler = () => setHamburger(!hamburger);
   const servicesHandler = () => setServices(!services);
+  const [size, setSize] = useState(window.innerWidth);
+
+  useEffect(() => {
+    size > 480 && setServices(false);
+  }, [size]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setSize(window.innerWidth);
+    };
+    window.addEventListener("resize", handleResize);
+  }, []);
 
   let sharedState = {
     favorites,
@@ -20,6 +32,7 @@ export function AppWrapper({ children }) {
     hamburgerHandler,
     services,
     servicesHandler,
+    size,
   };
 
   return (
