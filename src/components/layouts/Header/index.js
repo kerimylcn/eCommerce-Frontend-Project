@@ -15,12 +15,12 @@ const Header = () => {
       <header className="header">
         <div
           className="header__hamburger"
-          onClick={() => state.setHamburger(!state.hamburger)}
+          onClick={() => state.hamburgerHandler()}
         >
           {state.hamburger ? (
             <div
               className="header__hamburger--close"
-              onClick={() => state.setHamburger(!state.hamburger)}
+              onClick={() => state.hamburgerHandler()}
             >
               X
             </div>

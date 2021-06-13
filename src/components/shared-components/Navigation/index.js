@@ -3,10 +3,12 @@
 
 import Image from "../../../assets/images/dropdownitem.png";
 import { ArrowDown } from "../../../assets/icons/SVG";
-
+import { useAppContext } from "../../../context/state";
 import "./navigation.scss";
 
 const Navigation = () => {
+  const state = useAppContext();
+
   const services = {
     ProductCategories: [
       "Accesories",
@@ -47,12 +49,23 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="navigation">
+    <nav className={state.hamburger ? "navigation--active" : "navigation"}>
       <ul className="navigation__list">
-        <li className="navigation__list--item">
-          <span>SERVICES</span>
-          <ArrowDown />
-          <div className="navigation__list--item__services">
+        <li
+          className="navigation__list--item"
+          onClick={() => state.servicesHandler()}
+        >
+          <div>
+            <span>SERVICES</span>
+            <ArrowDown />
+          </div>
+          <div
+            className={
+              state.services && window.innerWidth < 480
+                ? "navigation__list--item__services--active"
+                : "navigation__list--item__services"
+            }
+          >
             <ul className="navigation__list--item__services__container">
               <li className="navigation__list--item__services__container--categorie--a">
                 <lh className="navigation__list--item__services__container--categorie--title">

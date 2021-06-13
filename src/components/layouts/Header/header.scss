@@ -8,6 +8,7 @@
 
   &__hamburger {
     display: none;
+    cursor: pointer;
     position: absolute;
     inset: 0;
     padding: 12px;
@@ -97,11 +98,11 @@
   }
 }
 
-//-----------------------------------mobile devices
+//###################################mobile devices
+
 @media (min-width: 320px) and (max-width: 480px) {
   .header {
     justify-content: center;
-
     &__hamburger {
       display: block;
 
@@ -129,47 +130,89 @@
       display: none;
     }
   }
-}
-.navigation {
-  display: block;
-  position: absolute;
-  width: 100%;
-  top: 52px;
-  background: #262a32;
-  height: 10rem;
+  .navigation {
+    display: none;
 
-  &__list {
-    flex-direction: column;
-    padding: 0;
+    &--active {
+      display: block;
+      position: absolute;
+      width: 100%;
+      padding: 0.5rem;
+      top: 52px;
+      background: #262a32;
+      height: auto;
+    }
 
-    &--item {
-      padding: 5px;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+    &__list {
+      flex-direction: column;
+      padding: 0;
 
-      svg {
-        display: block;
-      }
-
-      &:nth-child(1) {
+      &--item {
+        font-size: 12px;
+        font-weight: 600;
         padding: 5px;
-        border-bottom: 0;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
 
-        &:hover {
-          color: black;
-          background: none;
+        &--active {
+          font-size: 12px;
+          font-weight: 600;
+          padding: 5px;
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
         }
 
-        span::after {
-          content: none;
-        }
-      }
+        &__services {
+          position: static;
 
-      &:nth-child(5),
-      &:nth-child(6) {
-        display: none;
+          &__container {
+            padding: 0;
+
+            img {
+              display: none;
+            }
+          }
+        }
+
+        svg {
+          display: block;
+        }
+
+        &:nth-child(1) {
+          padding: 5px;
+          border-bottom: 0;
+          display: flex;
+          flex-direction: column;
+
+          & > div:first-of-type {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+          }
+
+          &:hover {
+            background: none;
+            border: none;
+            & > div:last-of-type {
+              display: none;
+            }
+          }
+
+          span::after {
+            padding: 0;
+            content: none;
+          }
+        }
+
+        &:nth-child(5),
+        &:nth-child(6) {
+          display: none;
+        }
       }
     }
   }
