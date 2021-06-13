@@ -6,6 +6,13 @@
   background: white;
   border-bottom: 1px solid rgba($color: #262a32, $alpha: 0.1);
 
+  &--hamburger {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
   &__logo {
     display: flex;
     align-items: center;
@@ -80,6 +87,11 @@
         border: 2px solid #84bc22;
         background: white;
         border-radius: 50%;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          transform: rotate(360deg);
+        }
       }
     }
   }

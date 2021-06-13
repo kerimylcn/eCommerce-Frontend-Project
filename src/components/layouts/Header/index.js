@@ -2,8 +2,10 @@ import Navigation from "../../shared-components/Navigation";
 import Logo from "../../../assets/images/logo.png";
 import { Search, User, Heart, Bag } from "../../../assets/icons/SVG";
 import { useAppContext } from "../../../context/state";
-
+import { HamburgerOpen } from "../../../assets/icons/SVG";
 import "./header.scss";
+
+//HEADER_3 left.
 
 const Header = () => {
   const state = useAppContext();
@@ -11,6 +13,12 @@ const Header = () => {
   return (
     <>
       <header className="header">
+        <div
+          className="header--hamburger"
+          onClick={() => state.setHamburger(!state.hamburger)}
+        >
+          {state.hamburger ? <HamburgerOpen /> : "X"}
+        </div>
         <div className="header__logo">
           <img src={Logo} alt="OSF Academy Logo" />
           <div className="header__logo--text">

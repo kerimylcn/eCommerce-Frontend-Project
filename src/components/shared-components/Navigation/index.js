@@ -1,5 +1,5 @@
 //768px view should done
-//all links should redirect to 404 PAGE
+//NAVIGATION_1 left
 
 import Image from "../../../assets/images/dropdownitem.png";
 
