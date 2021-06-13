@@ -14,10 +14,19 @@ const Header = () => {
     <>
       <header className="header">
         <div
-          className="header--hamburger"
+          className="header__hamburger"
           onClick={() => state.setHamburger(!state.hamburger)}
         >
-          {state.hamburger ? <HamburgerOpen /> : "X"}
+          {state.hamburger ? (
+            <div
+              className="header__hamburger--close"
+              onClick={() => state.setHamburger(!state.hamburger)}
+            >
+              X
+            </div>
+          ) : (
+            <HamburgerOpen />
+          )}
         </div>
         <div className="header__logo">
           <img src={Logo} alt="OSF Academy Logo" />

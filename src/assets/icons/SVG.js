@@ -105,10 +105,10 @@ export const ArrowDown = () => {
 
 export const HamburgerOpen = () => {
   return (
-    <svg viewBox="0 0 100 80" width="40" height="40">
-      <rect width="75" height="5"></rect>
-      <rect y="30" width="75" height="5"></rect>
-      <rect y="60" width="75" height="5"></rect>
+    <svg viewBox="0 0 200 50" width="40" height="20">
+      <rect width="120" height="5"></rect>
+      <rect y="30" width="120" height="5"></rect>
+      <rect y="60" width="120" height="5"></rect>
     </svg>
   );
 };
