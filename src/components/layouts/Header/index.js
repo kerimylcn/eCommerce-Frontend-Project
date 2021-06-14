@@ -29,7 +29,11 @@ const Header = () => {
           )}
         </div>
         <div className="header__logo">
-          <img src={Logo} alt="OSF Academy Logo" />
+          <img
+            src={Logo}
+            width={state.size < 1024 && 50}
+            alt="OSF Academy Logo"
+          />
           <div className="header__logo--text">
             <span>OSF</span>
             <span>Academy</span>
@@ -38,7 +42,7 @@ const Header = () => {
         <Navigation />
         <ul className="header__icons">
           <li className="header__icons--item">
-            <Search />
+            <Search width={10} />
           </li>
           <li className="header__icons--item">
             <User />

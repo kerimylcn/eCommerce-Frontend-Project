@@ -64,7 +64,7 @@ export const User = () => {
   );
 };
 
-export const Search = () => {
+export const Search = ({ width }) => {
   return (
     <svg
       version="1.1"
