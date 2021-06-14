@@ -126,10 +126,10 @@ const Navigation = () => {
                   ))}
                 </ul>
               </li>
+              <div>
+                <img src={Image} alt="Fashion Woman" />
+              </div>
             </ul>
-            <div>
-              <img src={Image} alt="Fashion Woman" />
-            </div>
           </div>
         </li>
         <li className="navigation__list--item">

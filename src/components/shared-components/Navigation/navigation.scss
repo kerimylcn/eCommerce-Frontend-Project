@@ -16,6 +16,10 @@
       cursor: pointer;
       transition: all 0.3s ease-in-out;
 
+      &:hover {
+        color: rgba(132, 188, 34, 1);
+      }
+
       svg {
         display: none;
       }
@@ -23,8 +27,9 @@
       &__services {
         display: none;
         position: absolute;
+        justify-content: flex-start;
         align-items: center;
-        padding: 2rem;
+        padding: 4rem;
         left: 0;
         width: 100%;
         top: 100%;
@@ -34,29 +39,33 @@
         &__container {
           display: flex;
           height: 263px;
+          width: 100%;
+          padding: 0;
           list-style: none;
           color: white;
-          cursor: normal;
+          justify-content: space-between;
 
           &--categorie {
             height: 100%;
-            min-width: 33%;
             font-size: 14px;
 
             &--a {
-              margin-right: 30rem;
-
-              &__list {
-                display: none;
-              }
+              display: flex;
+              flex-direction: column;
+              align-content: space-between;
+              width: 100%;
             }
+
+            &--b {
+              width: 33%;
+            }
+
             &--title {
               text-transform: uppercase;
               font-weight: bold;
             }
 
             &__list {
-              display: flex;
               flex-direction: column;
               flex-wrap: wrap;
               padding: 1rem 0;
@@ -67,7 +76,6 @@
 
               li {
                 line-height: 1.8rem;
-                margin-right: 10rem;
               }
             }
           }
@@ -82,30 +90,33 @@
         padding-left: 1.5rem;
         padding-right: 0.5rem;
         border-bottom: 2px solid rgba(132, 188, 34, 0);
+        &:hover {
+          color: #fff;
+          background: #262a32;
+          border-bottom: 2px solid rgba(132, 188, 34, 1);
+          & > div {
+            display: flex;
+          }
+        }
       }
 
       &:nth-child(5),
       &:nth-child(6) {
         color: rgb(189, 195, 199);
         padding-left: 1.5em;
+
+        &:after {
+          content: url(../../../assets/icons/ArrowDown.svg);
+          padding-left: 1.5em;
+        }
+
+        &:hover {
+          color: rgba(132, 188, 34, 1);
+        }
       }
       span::after {
         content: url(../../../assets/icons/ArrowDown.svg);
         padding-left: 1rem;
-      }
-
-      &:nth-child(5)::after,
-      &:nth-child(6)::after {
-        content: url(../../../assets/icons/ArrowDown.svg);
-        padding-left: 1.5em;
-      }
-      &:nth-child(1):hover {
-        color: #fff;
-        background: #262a32;
-        border-bottom: 2px solid rgba(132, 188, 34, 1);
-        & > div {
-          display: flex;
-        }
       }
     }
   }
@@ -227,6 +238,35 @@
         &:nth-child(5),
         &:nth-child(6) {
           display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .navigation {
+    &__list {
+      &--item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 4.1rem;
+        width: 6rem;
+        padding: 0;
+
+        &:nth-child(1) {
+          width: 8rem;
+        }
+
+        &:nth-child(5),
+        &:nth-child(6) {
+          padding: 0;
+          width: 4rem;
+
+          &::after {
+            padding-left: 0.3rem;
+          }
         }
       }
     }

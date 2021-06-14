@@ -20,7 +20,7 @@ An eCommerce Frontend Project that given as task by OSF Academy Instructors.
 
   - [x] Header (HEADER_3 LEFT)
   - [x] Navigation (RESPONSIVE LEFT)
-  - [ ] Navigation on Mobile
+  - [x] Navigation on Mobile
   - [ ] Footer
 
 - [ ] **PRODUCTION TILE**
