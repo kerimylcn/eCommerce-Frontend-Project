@@ -7,13 +7,27 @@ export function AppWrapper({ children }) {
   const [cart, setCart] = useState(["test", "test"]);
   const [hamburger, setHamburger] = useState(false);
   const [services, setServices] = useState(false);
+  const [categorieA, setCategorieA] = useState(true);
+  const [categorieB, setCategorieB] = useState(true);
 
   const hamburgerHandler = () => setHamburger(!hamburger);
   const servicesHandler = () => setServices(!services);
+  const categorieHandlerA = () => setCategorieA(!categorieA);
+  const categorieHandlerB = () => setCategorieB(!categorieB);
+
   const [size, setSize] = useState(window.innerWidth);
 
+  //Tracks window size and closes hamburger menu and services sub
   useEffect(() => {
-    size > 480 && setServices(false);
+    if (size > 480) {
+      setServices(false);
+      setHamburger(false);
+      setCategorieA(true);
+      setCategorieB(true);
+    } else {
+      setCategorieA(false);
+      setCategorieB(false);
+    }
   }, [size]);
 
   useEffect(() => {
@@ -22,6 +36,7 @@ export function AppWrapper({ children }) {
     };
     window.addEventListener("resize", handleResize);
   }, []);
+  /////
 
   let sharedState = {
     favorites,
@@ -33,6 +48,10 @@ export function AppWrapper({ children }) {
     services,
     servicesHandler,
     size,
+    categorieA,
+    categorieB,
+    categorieHandlerA,
+    categorieHandlerB,
   };
 
   return (

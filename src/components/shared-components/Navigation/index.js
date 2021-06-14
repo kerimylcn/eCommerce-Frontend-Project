@@ -51,37 +51,76 @@ const Navigation = () => {
   return (
     <nav className={state.hamburger ? "navigation--active" : "navigation"}>
       <ul className="navigation__list">
-        <li
-          className="navigation__list--item"
-          onClick={() => state.servicesHandler()}
-        >
-          <div>
+        <li className="navigation__list--item">
+          <div onClick={() => state.servicesHandler()}>
             <span>SERVICES</span>
-            <ArrowDown />
+            <div
+              style={
+                state.services
+                  ? { transform: "rotate(180deg)" }
+                  : { transform: "none" }
+              }
+            >
+              <ArrowDown />
+            </div>
           </div>
           <div
             className={
-              state.services && window.innerWidth < 480
+              state.services && state.size < 480
                 ? "navigation__list--item__services--active"
                 : "navigation__list--item__services"
             }
           >
             <ul className="navigation__list--item__services__container">
               <li className="navigation__list--item__services__container--categorie--a">
-                <lh className="navigation__list--item__services__container--categorie--title">
+                <lh
+                  className="navigation__list--item__services__container--categorie--title"
+                  onClick={() => state.categorieHandlerA()}
+                >
                   Product Categories
+                  <div
+                    style={
+                      state.categorieA
+                        ? { transform: "rotate(180deg)" }
+                        : { transform: "none" }
+                    }
+                  >
+                    <ArrowDown />
+                  </div>
                 </lh>
-                <ul className="navigation__list--item__services__container--categorie__list">
+                <ul
+                  className="navigation__list--item__services__container--categorie__list"
+                  style={
+                    state.categorieA ? { display: "flex" } : { display: "none" }
+                  }
+                >
                   {services.ProductCategories.map((product, index) => (
                     <li key={index}>{product}</li>
                   ))}
                 </ul>
               </li>
               <li className="navigation__list--item__services__container--categorie--b">
-                <lh className="navigation__list--item__services__container--categorie--title">
+                <lh
+                  className="navigation__list--item__services__container--categorie--title"
+                  onClick={() => state.categorieHandlerB()}
+                >
                   Sale
+                  <div
+                    style={
+                      state.categorieB
+                        ? { transform: "rotate(180deg)" }
+                        : { transform: "none" }
+                    }
+                  >
+                    <ArrowDown />
+                  </div>
                 </lh>
-                <ul className="navigation__list--item__services__container--categorie__list">
+                <ul
+                  className="navigation__list--item__services__container--categorie__list"
+                  style={
+                    state.categorieB ? { display: "flex" } : { display: "none" }
+                  }
+                >
                   {services.Sale.map((sale, index) => (
                     <li key={index}>{sale}</li>
                   ))}
