@@ -46,6 +46,7 @@
     display: flex;
     list-style: none;
     cursor: pointer;
+    align-items: center;
 
     li {
       padding-right: 2em;
@@ -65,12 +66,27 @@
     }
 
     &--item {
+      .svg {
+        width: 1em;
+        height: 1em;
+        font-size: 27px;
+      }
       &--fav {
         position: relative;
+        .svg {
+          width: 1em;
+          height: 1em;
+          font-size: 27px;
+        }
       }
 
       &--cart {
         position: relative;
+        .svg {
+          width: 1em;
+          height: 1em;
+          font-size: 27px;
+        }
       }
 
       &--badge {
@@ -79,7 +95,7 @@
         width: 15px;
         height: 15px;
         left: 18px;
-        bottom: 25px;
+        bottom: 18px;
         color: #84bc22;
         font-size: 8px;
         font-weight: 600;
@@ -97,7 +113,7 @@
   }
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .header {
     justify-content: center;
     &__hamburger {
@@ -131,7 +147,7 @@
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .header {
-    padding: 0 1rem;
+    padding: 0 2rem;
 
     &__logo {
       &--text {
@@ -147,8 +163,40 @@
       }
     }
 
-    .icons {
-      padding: 0;
+    &__icons {
+      align-items: center;
+      padding-left: 0;
+
+      li {
+        padding-right: 1em;
+      }
+      &--item {
+        &--badge {
+          left: 15px;
+          bottom: 14px;
+        }
+        .svg {
+          width: 1em;
+          height: 1em;
+          font-size: 22px;
+        }
+
+        &--fav {
+          .svg {
+            width: 1em;
+            height: 1em;
+            font-size: 22px;
+          }
+        }
+
+        &--cart {
+          .svg {
+            width: 1em;
+            height: 1em;
+            font-size: 22px;
+          }
+        }
+      }
     }
   }
 }
