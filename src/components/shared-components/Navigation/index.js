@@ -85,7 +85,9 @@ const Navigation = () => {
                         : { transform: "none" }
                     }
                   >
-                    <ArrowDown />
+                    <div>
+                      <ArrowDown />
+                    </div>
                   </div>
                 </lh>
                 <ul

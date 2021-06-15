@@ -9,11 +9,15 @@ export function AppWrapper({ children }) {
   const [services, setServices] = useState(false);
   const [categorieA, setCategorieA] = useState(true);
   const [categorieB, setCategorieB] = useState(true);
+  const [footerContact, setFooterContact] = useState(true);
+  const [footerCategories, setFooterCategories] = useState(true);
 
   const hamburgerHandler = () => setHamburger(!hamburger);
   const servicesHandler = () => setServices(!services);
   const categorieHandlerA = () => setCategorieA(!categorieA);
   const categorieHandlerB = () => setCategorieB(!categorieB);
+  const footerContactHandler = () => setFooterContact(!footerContact);
+  const footerCategoriesHandler = () => setFooterCategories(!footerCategories);
 
   const [size, setSize] = useState(window.innerWidth);
 
@@ -24,9 +28,13 @@ export function AppWrapper({ children }) {
       setHamburger(false);
       setCategorieA(true);
       setCategorieB(true);
+      footerContactHandler(true);
+      footerCategoriesHandler(true);
     } else {
       setCategorieA(false);
       setCategorieB(false);
+      footerContactHandler(false);
+      footerCategoriesHandler(false);
     }
   }, [size]);
 
@@ -52,6 +60,10 @@ export function AppWrapper({ children }) {
     categorieB,
     categorieHandlerA,
     categorieHandlerB,
+    footerContact,
+    footerContactHandler,
+    footerCategories,
+    footerCategoriesHandler,
   };
 
   return (

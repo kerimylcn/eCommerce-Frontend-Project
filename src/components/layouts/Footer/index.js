@@ -1,13 +1,16 @@
 import React from "react";
+import { useAppContext } from "../../../context/state.js";
 import {
   Facebook,
   Google,
   Twitter,
   Pinterest,
+  ArrowDown,
 } from "../../../assets/icons/SVG.js";
 import "./footer.scss";
 
 const Footer = () => {
+  const state = useAppContext();
   const date = new Date();
 
   const information = {
@@ -43,40 +46,76 @@ const Footer = () => {
               <p>All rights Reserved.</p>
             </li>
             <li>
-              <h5>CONTACT</h5>
-              <p className="footer__container__section--item">Headquarters:</p>
-              <p className="footer__container__section--item">
-                5600, Blvd. des Galeries, Bur 530
-              </p>
-              <p className="footer__container__section--item">
-                Québec, Québec G2K 2H6
-              </p>
+              <h onClick={() => state.footerContactHandler()}>
+                CONTACT
+                <div
+                  style={
+                    state.footerContact
+                      ? { rotate: "180deg" }
+                      : { rotate: "none" }
+                  }
+                >
+                  <ArrowDown />
+                </div>
+              </h>
+              <div
+                style={
+                  state.footerContact
+                    ? { display: "block" }
+                    : { display: "none" }
+                }
+              >
+                <p className="footer__container__section--item ">
+                  Headquarters:
+                </p>
+                <p className="footer__container__section--item ">
+                  5600, Blvd. des Galeries, Bur 530
+                </p>
+                <p className="footer__container__section--item ">
+                  Québec, Québec G2K 2H6
+                </p>
+              </div>
             </li>
 
-            <li>
-              <a
-                className="footer__container__section--item"
-                href=" mailto: contact@osf-global.com"
-              >
-                contact@osf-global.com
-              </a>
-            </li>
-
-            <li>
-              <a
-                className="footer__container__section--item"
-                href="tel: +18885484344"
-              >
-                +1(888) 548-4344
-              </a>
-            </li>
+            <div
+              style={
+                state.footerContact ? { display: "block" } : { display: "none" }
+              }
+            >
+              <li className="footer__container__section--item">
+                <a href=" mailto: contact@osf-global.com">
+                  contact@osf-global.com
+                </a>
+              </li>
+              <li className="footer__container__section--item">
+                <a href="tel: +18885484344">+1(888) 548-4344</a>
+              </li>
+            </div>
           </ul>
 
           <li className="footer__container__section--b">
             <ul className="footer__container__section--b__container">
-              <li className="footer__container__section--b__container--a">
-                <h5>CATEGORIES</h5>
-                <ul className="footer__container__section--b__container--a__list">
+              <li className="footer__container__section--b__container__a">
+                <h onClick={() => state.footerCategoriesHandler()}>
+                  CATEGORIES
+                  <div
+                    style={
+                      state.footerCategories
+                        ? { transform: "rotate(180deg)" }
+                        : { transform: "none" }
+                    }
+                  >
+                    <ArrowDown />
+                  </div>
+                </h>
+                <ul
+                  className="footer__container__section--b__container__a__list"
+                  style={
+                    state.footerCategories
+                      ? { display: "block" }
+                      : { display: "none" }
+                  }
+                >
                   {information.categories.map((categorie, index) => (
                     <li
                       className="footer__container__section--item"
@@ -88,7 +127,7 @@ const Footer = () => {
                 </ul>
               </li>
               <li className="footer__container__section--b__container--b">
-                <h5>ABOUT</h5>
+                <h>ABOUT</h>
                 <ul className="footer__container__section--b__container--b__list">
                   {information.about.map((info, index) => (
                     <li
@@ -105,16 +144,24 @@ const Footer = () => {
           <li className="footer__container__section--c">
             <ul>
               <li>
-                <Facebook />
+                <a href="https://www.facebook.com/OSFDigital/" target="_blank">
+                  <Facebook />
+                </a>
               </li>
               <li>
-                <Google />
+                <a href="https://osf.digital/" target="_blank">
+                  <Google />
+                </a>
               </li>
               <li>
-                <Pinterest />
+                <a href="https://osf.digital/" target="_blank">
+                  <Pinterest />
+                </a>
               </li>
               <li>
-                <Twitter />
+                <a href="https://twitter.com/osfdigital" target="_blank">
+                  <Twitter />
+                </a>
               </li>
             </ul>
           </li>
