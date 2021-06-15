@@ -8,6 +8,10 @@
     padding: 0px;
   }
 
+  svg {
+    display: none;
+  }
+
   &__container {
     width: 100%;
     &__section {
@@ -99,6 +103,10 @@
     display: flex;
     align-items: flex-end;
     padding: 0;
+
+    svg {
+      display: block;
+    }
 
     h {
       display: flex;

@@ -23,22 +23,22 @@ export function AppWrapper({ children }) {
 
   const [size, setSize] = useState(window.innerWidth);
 
-  //Tracks window size and closes hamburger menu and services sub
+  // Tracks window size and closes hamburger menu and services sub
   useEffect(() => {
-    if (size > 480) {
+    if (size > 767) {
       setServices(false);
       setHamburger(false);
       setCategorieA(true);
       setCategorieB(true);
-      footerContactHandler(true);
-      footerCategoriesHandler(true);
-      footerAboutHandler(true);
+      setFooterContact(true);
+      setFooterCategories(true);
+      setFooterAbout(true);
     } else {
       setCategorieA(false);
       setCategorieB(false);
-      footerContactHandler(false);
-      footerCategoriesHandler(false);
-      footerAboutHandler(false);
+      setFooterContact(false);
+      setFooterCategories(false);
+      setFooterAbout(false);
     }
   }, [size]);
 

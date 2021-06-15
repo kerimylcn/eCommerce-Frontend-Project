@@ -112,7 +112,7 @@ const Footer = () => {
                   className="footer__container__section--b__container__a__list"
                   style={
                     state.footerCategories
-                      ? { display: "block" }
+                      ? { display: "flex" }
                       : { display: "none" }
                   }
                 >
@@ -131,9 +131,10 @@ const Footer = () => {
                   ABOUT{" "}
                   <div
                     style={
-                      state.footerAbout
+                      (state.footerAbout
                         ? { transform: "rotate(180deg)" }
-                        : { transform: "none" }
+                        : { transform: "none" },
+                      { color: "black" })
                     }
                   >
                     <ArrowDown />
