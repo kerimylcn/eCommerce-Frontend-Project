@@ -11,6 +11,7 @@ export function AppWrapper({ children }) {
   const [categorieB, setCategorieB] = useState(true);
   const [footerContact, setFooterContact] = useState(true);
   const [footerCategories, setFooterCategories] = useState(true);
+  const [footerAbout, setFooterAbout] = useState(true);
 
   const hamburgerHandler = () => setHamburger(!hamburger);
   const servicesHandler = () => setServices(!services);
@@ -18,6 +19,7 @@ export function AppWrapper({ children }) {
   const categorieHandlerB = () => setCategorieB(!categorieB);
   const footerContactHandler = () => setFooterContact(!footerContact);
   const footerCategoriesHandler = () => setFooterCategories(!footerCategories);
+  const footerAboutHandler = () => setFooterAbout(!footerAbout);
 
   const [size, setSize] = useState(window.innerWidth);
 
@@ -30,11 +32,13 @@ export function AppWrapper({ children }) {
       setCategorieB(true);
       footerContactHandler(true);
       footerCategoriesHandler(true);
+      footerAboutHandler(true);
     } else {
       setCategorieA(false);
       setCategorieB(false);
       footerContactHandler(false);
       footerCategoriesHandler(false);
+      footerAboutHandler(false);
     }
   }, [size]);
 
@@ -64,6 +68,8 @@ export function AppWrapper({ children }) {
     footerContactHandler,
     footerCategories,
     footerCategoriesHandler,
+    footerAbout,
+    footerAboutHandler,
   };
 
   return (

@@ -96,18 +96,21 @@
 
 @media (min-width: 320px) and (max-width: 767px) {
   .footer {
+    h {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      &:hover {
+        color: #84bc22;
+      }
+    }
     padding: 0;
 
     &__container {
       &__section {
         flex-direction: column;
-
-        &--a {
-          h {
-            display: flex;
-            justify-content: space-between;
-          }
-        }
+        height: auto;
 
         &--b {
           &__container {
@@ -115,11 +118,6 @@
 
             &__a {
               margin: 0;
-
-              h {
-                display: flex;
-                justify-content: space-between;
-              }
 
               &__list {
                 li {

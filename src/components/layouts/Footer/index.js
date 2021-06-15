@@ -127,8 +127,26 @@ const Footer = () => {
                 </ul>
               </li>
               <li className="footer__container__section--b__container--b">
-                <h>ABOUT</h>
-                <ul className="footer__container__section--b__container--b__list">
+                <h onClick={() => state.footerAboutHandler()}>
+                  ABOUT{" "}
+                  <div
+                    style={
+                      state.footerAbout
+                        ? { transform: "rotate(180deg)" }
+                        : { transform: "none" }
+                    }
+                  >
+                    <ArrowDown />
+                  </div>
+                </h>
+                <ul
+                  className="footer__container__section--b__container--b__list"
+                  style={
+                    state.footerAbout
+                      ? { display: "block" }
+                      : { display: "none" }
+                  }
+                >
                   {information.about.map((info, index) => (
                     <li
                       className="footer__container__section--item"
