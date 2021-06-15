@@ -4,6 +4,7 @@
   justify-content: space-between;
   padding: 0 4rem;
   background: white;
+  z-index: 9;
   border-bottom: 1px solid rgba($color: #262a32, $alpha: 0.1);
 
   &__hamburger {

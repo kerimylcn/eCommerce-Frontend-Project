@@ -11,57 +11,53 @@ const Header = () => {
   const state = useAppContext();
 
   return (
-    <>
-      <header className="header">
-        <div
-          className="header__hamburger"
-          onClick={() => state.hamburgerHandler()}
-        >
-          {state.hamburger ? (
-            <div
-              className="header__hamburger--close"
-              onClick={() => state.hamburgerHandler()}
-            >
-              X
-            </div>
-          ) : (
-            <HamburgerOpen />
-          )}
-        </div>
-        <div className="header__logo">
-          <img
-            src={Logo}
-            width={state.size < 1024 && 50}
-            alt="OSF Academy Logo"
-          />
-          <div className="header__logo--text">
-            <span>OSF</span>
-            <span>Academy</span>
+    <header className="header">
+      <div
+        className="header__hamburger"
+        onClick={() => state.hamburgerHandler()}
+      >
+        {state.hamburger ? (
+          <div
+            className="header__hamburger--close"
+            onClick={() => state.hamburgerHandler()}
+          >
+            X
           </div>
+        ) : (
+          <HamburgerOpen />
+        )}
+      </div>
+      <div className="header__logo">
+        <img
+          src={Logo}
+          width={state.size < 1024 && 50}
+          alt="OSF Academy Logo"
+        />
+        <div className="header__logo--text">
+          <span>OSF</span>
+          <span>Academy</span>
         </div>
-        <Navigation />
-        <ul className="header__icons">
-          <li className="header__icons--item">
-            <Search width={10} />
-          </li>
-          <li className="header__icons--item">
-            <User />
-          </li>
-          <li className="header__icons--item--fav">
-            <Heart />
-            <div className="header__icons--item--badge">
-              {state.favorites.length}
-            </div>
-          </li>
-          <li className="header__icons--item--cart">
-            <Bag />
-            <div className="header__icons--item--badge">
-              {state.cart.length}
-            </div>
-          </li>
-        </ul>
-      </header>
-    </>
+      </div>
+      <Navigation />
+      <ul className="header__icons">
+        <li className="header__icons--item">
+          <Search width={10} />
+        </li>
+        <li className="header__icons--item">
+          <User />
+        </li>
+        <li className="header__icons--item--fav">
+          <Heart />
+          <div className="header__icons--item--badge">
+            {state.favorites.length}
+          </div>
+        </li>
+        <li className="header__icons--item--cart">
+          <Bag />
+          <div className="header__icons--item--badge">{state.cart.length}</div>
+        </li>
+      </ul>
+    </header>
   );
 };
 
