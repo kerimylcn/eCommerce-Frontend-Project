@@ -21,7 +21,7 @@ An eCommerce Frontend Project that given as task by OSF Academy Instructors.
   - [x] Header (HEADER_3 LEFT)
   - [x] Navigation (EN, $US SELECTS WILL BE ADDED)
   - [x] Navigation on Mobile
-  - [ ] Footer
+  - [x] Footer
 
 - [ ] **PRODUCTION TILE**
 
