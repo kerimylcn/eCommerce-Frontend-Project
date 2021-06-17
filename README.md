@@ -16,7 +16,7 @@ An eCommerce Frontend Project that given as task by OSF Academy Instructors.
 
 > checked todos are done.
 
-- [ ] **GLOBAL ELEMENTS**
+- [x] **GLOBAL ELEMENTS**
 
   - [x] Header (HEADER_3 LEFT)
   - [x] Navigation (EN, $US SELECTS WILL BE ADDED)

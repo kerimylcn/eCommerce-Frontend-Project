@@ -66,7 +66,7 @@ const Navigation = () => {
           </div>
           <div
             className={
-              state.services && state.size < 480
+              state.services && state.size <= 767
                 ? "navigation__list--item__services--active"
                 : "navigation__list--item__services"
             }

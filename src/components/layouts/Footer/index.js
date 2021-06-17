@@ -46,7 +46,11 @@ const Footer = () => {
               <p>All rights Reserved.</p>
             </li>
             <li>
-              <h onClick={() => state.footerContactHandler()}>
+              <h
+                onClick={() =>
+                  state.size <= 767 ? state.footerContactHandler() : ""
+                }
+              >
                 CONTACT
                 <div
                   style={
@@ -96,7 +100,11 @@ const Footer = () => {
           <li className="footer__container__section--b">
             <ul className="footer__container__section--b__container">
               <li className="footer__container__section--b__container__a">
-                <h onClick={() => state.footerCategoriesHandler()}>
+                <h
+                  onClick={() =>
+                    state.size <= 767 ? state.footerCategoriesHandler() : ""
+                  }
+                >
                   CATEGORIES
                   <div
                     style={
@@ -127,7 +135,11 @@ const Footer = () => {
                 </ul>
               </li>
               <li className="footer__container__section--b__container--b">
-                <h onClick={() => state.footerAboutHandler()}>
+                <h
+                  onClick={() =>
+                    state.size <= 767 ? state.footerAboutHandler() : ""
+                  }
+                >
                   ABOUT{" "}
                   <div
                     style={
