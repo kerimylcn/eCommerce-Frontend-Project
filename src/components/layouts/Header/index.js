@@ -48,13 +48,27 @@ const Header = () => {
         </li>
         <li className="header__icons--item--fav">
           <Heart />
-          <div className="header__icons--item--badge">
+          <div
+            className="header__icons--item--badge"
+            style={
+              state.favorites.length > 0
+                ? { display: "block" }
+                : { display: "none" }
+            }
+          >
             {state.favorites.length}
           </div>
         </li>
         <li className="header__icons--item--cart">
           <Bag />
-          <div className="header__icons--item--badge">{state.cart.length}</div>
+          <div
+            className="header__icons--item--badge"
+            style={
+              state.cart.length > 0 ? { display: "block" } : { display: "none" }
+            }
+          >
+            {state.cart.length}
+          </div>
         </li>
       </ul>
     </header>

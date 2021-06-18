@@ -1,12 +1,14 @@
 .productMessage {
   position: relative;
   width: 272px;
+  height: 390px;
   background: url(../../../assets/images/productmessage.png);
   background-position: 90% 50%;
   border-radius: 0.5rem;
   overflow: hidden;
   cursor: default;
   margin: 1rem;
+  line-height: 1.4rem;
 
   &--gradient {
     position: absolute;
@@ -39,6 +41,7 @@
   position: relative;
   z-index: 1;
   width: 272px;
+  height: 390px;
   border-radius: 0.5rem;
   overflow: hidden;
   font-size: 14px;
@@ -73,8 +76,8 @@
     background: rgb(51, 200, 122);
     background: linear-gradient(
       140deg,
-      rgba(51, 200, 122, 0.8309523638556986) 0%,
-      rgba(51, 200, 122, 0.763725473099396) 50%,
+      rgba(51, 200, 122, 0.409523638556986) 0%,
+      rgba(51, 200, 122, 0.563725473099396) 50%,
       rgba(51, 200, 122, 1) 100%
     );
     width: 100%;
@@ -116,7 +119,7 @@
 
 .productButton {
   width: 272px;
-  height: auto;
+  height: 390px;
   overflow: hidden;
   border-radius: 0.5rem;
   font-size: 14px;

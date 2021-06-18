@@ -23,12 +23,13 @@ An eCommerce Frontend Project that given as task by OSF Academy Instructors.
   - [x] Navigation on Mobile
   - [x] Footer
 
-- [ ] **PRODUCTION TILE**
+- [x] **PRODUCTION TILE**
 
-  - [ ] Production Tile 1
-  - [ ] Production Tile 2
-  - [ ] Production Tile 3
-  - [ ] Production Tile 4
+  - [x] Production Tile 1
+  - [x] Production Tile 2
+  - [x] Production Tile 3
+  - [x] Production Tile 4
+        (PRODUCT_TILE_1 left - detail page)
 
 - [ ] **HOMEPAGE**
 

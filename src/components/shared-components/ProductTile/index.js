@@ -1,5 +1,6 @@
 import "./producttile.scss";
 import { Plus, Like } from "../../../assets/icons/SVG";
+
 const ProductTile = (props) => {
   return props.message ? (
     <div className="productMessage">
@@ -15,10 +16,10 @@ const ProductTile = (props) => {
   ) : props.hover ? (
     <div className="productHover">
       <div className="productHover__hoverState">
-        <button>
+        <button onClick={props.cartHandler}>
           <Plus />
         </button>
-        <button>
+        <button onClick={props.favHandler}>
           <Like />
         </button>
       </div>

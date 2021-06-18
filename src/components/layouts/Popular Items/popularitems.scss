@@ -1,0 +1,33 @@
+.popular {
+  background: #262a32;
+  position: relative;
+  width: 100%;
+  &--line {
+    width: 100%;
+    position: absolute;
+    top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.187);
+  }
+
+  &--text {
+    position: absolute;
+    top: 0.8rem;
+    text-align: center;
+    left: 40rem;
+    width: 11rem;
+    color: white;
+    background: #262a32;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  &__item {
+    &--container {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: center;
+      background: #262a32;
+      padding: 5rem 0rem 5rem 0rem;
+    }
+  }
+}
