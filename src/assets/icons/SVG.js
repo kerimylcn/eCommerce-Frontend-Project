@@ -156,3 +156,33 @@ export const Pinterest = () => {
     </svg>
   );
 };
+
+export const Plus = () => {
+  return (
+    <svg viewBox="0 0 30 30">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30">
+        <path
+          paint-order="stroke fill markers"
+          fill-rule="evenodd"
+          fill="#23C46E"
+          d="M28.844 18.984H18.497v10.348a.61.61 0 0 1-.609.608h-4.87a.61.61 0 0 1-.608-.608V18.984H2.062a.609.609 0 0 1-.609-.609v-4.87c0-.336.273-.609.609-.609H12.41V2.55c0-.336.272-.609.608-.609h4.87a.61.61 0 0 1 .609.609v10.347h10.347c.337 0 .61.273.61.61v4.87a.608.608 0 0 1-.61.608z"
+        />
+      </svg>
+    </svg>
+  );
+};
+
+export const Like = () => {
+  return (
+    <svg viewBox="0 0 34 29">
+      <svg xmlns="http://www.w3.org/2000/svg" width="34" height="29">
+        <path
+          paint-order="stroke fill markers"
+          fill-rule="evenodd"
+          fill="#E73C68"
+          d="M32.272 16.001c3.181-3.21 3.18-8.41 0-11.62a8.088 8.088 0 0 0-5.896-2.405c-2.98.05-7.892 4.028-7.892 4.028s-5.052-4.034-8.105-4.029a8.084 8.084 0 0 0-5.745 2.407c-3.179 3.21-3.18 8.409 0 11.62l13.82 13.938 13.818-13.939z"
+        />
+      </svg>
+    </svg>
+  );
+};
