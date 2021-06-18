@@ -5,7 +5,15 @@ import "./popularitems.scss";
 
 const PopularItems = () => {
   return (
-    <div style={{ display: "flex", flexWrap: "wrap", background: "#262A32" }}>
+    <div
+      style={{
+        display: "flex",
+        flexWrap: "wrap",
+        justifyContent: "center",
+        background: "#262A32",
+        padding: "2rem",
+      }}
+    >
       {productData.map((product) => (
         <ProductTile
           id={product.id}

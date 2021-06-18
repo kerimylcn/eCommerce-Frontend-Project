@@ -7,7 +7,7 @@ const ProductTile = (props) => {
       <div className="productMessage__msgContainer">
         <p>{props.name}</p>
         <div className="productMessage__msgContainer--altContainer">
-          <img src={props.icon} />
+          <img src={props.icon} alt={props.name} />
           <span>{props.time}</span>
         </div>
       </div>
@@ -22,14 +22,25 @@ const ProductTile = (props) => {
           <Like />
         </button>
       </div>
-      <img src={props.image} />
+      <img src={props.image} alt={props.name} />
       <div className="productHover__alt">
         <p>{props.name}</p>
         <p className="productHover__alt--price">$ {props.price}</p>
       </div>
     </div>
   ) : (
-    "button"
+    <div className="productButton">
+      <img src={props.image} alt={props.name} />
+      <div className="productButton__alt">
+        <p>{props.name}</p>
+        <button>
+          <div>
+            <span>${props.price}</span>
+          </div>
+          <span>BUY NOW</span>
+        </button>
+      </div>
+    </div>
   );
 };
 
