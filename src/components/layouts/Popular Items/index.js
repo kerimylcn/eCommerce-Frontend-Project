@@ -10,14 +10,15 @@ import "./popularitems.scss";
 
 const PopularItems = () => {
   const state = useAppContext();
-  const [navigationValue, setNavigationValue] = useState(1);
+  const [navigationValue, setNavigationValue] = useState(0);
 
   const onClickHandler = (e) => {
-    return setNavigationValue(e.target.value);
+    return setNavigationValue(parseInt(e.target.value));
   };
 
   const cartHandler = () => state.setCart([...state.cart, this]);
   const favHandler = () => state.setFavorites([...state.favorites, this]);
+
   return (
     <div className="popular">
       <div className="popular__line--container">
@@ -28,17 +29,17 @@ const PopularItems = () => {
       <div
         className="popular__item--container"
         style={
-          navigationValue === 1
+          navigationValue === 0
             ? { marginLeft: "0" }
-            : navigationValue === 2
+            : navigationValue === 1
             ? { marginLeft: "-20.9rem" }
-            : navigationValue === 3
+            : navigationValue === 2
             ? { marginLeft: "-41.6rem" }
+            : navigationValue === 3
+            ? { marginLeft: "-62.5rem" }
             : navigationValue === 4
-            ? { marginLeft: "-62.5rem" }
-            : navigationValue === 5
-            ? { marginLeft: "-62.5rem" }
-            : ""
+            ? { marginLeft: "-83.1rem" }
+            : { color: "black" }
         }
       >
         {state.productData.slice(0, state.popularItemsSlicer).map((product) => (
@@ -65,7 +66,7 @@ const PopularItems = () => {
           <input
             type="radio"
             name="foo"
-            value="1"
+            value={0}
             onClick={(e) => onClickHandler(e)}
           ></input>
         </li>
@@ -73,7 +74,7 @@ const PopularItems = () => {
           <input
             type="radio"
             name="foo"
-            value="2"
+            value={1}
             onClick={(e) => onClickHandler(e)}
           ></input>
         </li>
@@ -81,7 +82,7 @@ const PopularItems = () => {
           <input
             type="radio"
             name="foo"
-            value="3"
+            value={2}
             onClick={(e) => onClickHandler(e)}
           ></input>
         </li>
@@ -89,7 +90,7 @@ const PopularItems = () => {
           <input
             type="radio"
             name="foo"
-            value="4"
+            value={3}
             onClick={(e) => onClickHandler(e)}
           ></input>
         </li>
@@ -97,7 +98,7 @@ const PopularItems = () => {
           <input
             type="radio"
             name="foo"
-            value="5"
+            value={4}
             onClick={(e) => onClickHandler(e)}
           ></input>
         </li>
