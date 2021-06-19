@@ -30,6 +30,7 @@ An eCommerce Frontend Project that given as task by OSF Academy Instructors.
   - [x] Production Tile 3
   - [x] Production Tile 4
         (PRODUCT_TILE_1 left - detail page)
+        (Responsive will be done)
 
 - [ ] **HOMEPAGE**
 

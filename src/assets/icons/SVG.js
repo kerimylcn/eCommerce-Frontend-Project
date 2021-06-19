@@ -186,3 +186,5 @@ export const Like = () => {
     </svg>
   );
 };
+
+export const LoadMore = () => {};

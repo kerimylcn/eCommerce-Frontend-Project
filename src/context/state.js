@@ -13,6 +13,7 @@ export function AppWrapper({ children }) {
   const [footerContact, setFooterContact] = useState(true);
   const [footerCategories, setFooterCategories] = useState(true);
   const [footerAbout, setFooterAbout] = useState(true);
+  const [popularItemsSlicer, setPopularItemsSlicer] = useState(5);
 
   const [productData, setProductData] = useState([
     {
@@ -134,6 +135,7 @@ export function AppWrapper({ children }) {
     }
   }, [size]);
 
+  //size a göre popularItemsSlicer değişecek
   useEffect(() => {
     const handleResize = () => {
       setSize(window.innerWidth);
@@ -163,6 +165,7 @@ export function AppWrapper({ children }) {
     footerAbout,
     footerAboutHandler,
     productData,
+    popularItemsSlicer,
   };
 
   return (
