@@ -1,7 +1,7 @@
 import { AppWrapper } from "./context/state";
 import Header from "./components/layouts/Header";
 import Footer from "./components/layouts/Footer";
-import PopularItems from "./components/layouts/Popular Items";
+import Homepage from "./components/pages/Homepage";
 import "./App.scss";
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
     <AppWrapper>
       <div className="App">
         <Header />
-        <PopularItems />
+        <Homepage />
         <Footer />
       </div>
     </AppWrapper>

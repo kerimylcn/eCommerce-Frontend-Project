@@ -81,9 +81,6 @@
   .popular {
     overflow: hidden;
 
-    ul {
-    }
-
     &__navigation {
       display: none;
       justify-content: center;
@@ -100,7 +97,7 @@
         width: 800%;
         transform: translateX(1rem);
 
-        transition: all 1s ease-out;
+        transition: margin 1s ease-in-out;
       }
     }
 

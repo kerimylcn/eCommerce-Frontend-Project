@@ -1,0 +1,190 @@
+.carousel {
+  &__container {
+    display: flex;
+    height: 600px;
+    padding: 2rem;
+  }
+
+  &__banner {
+    &__container {
+      width: 1000px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    &--wrapper {
+      //   overflow: hidden;
+      width: 3000px;
+      height: 500px;
+      display: flex;
+      transition: margin 0.8s ease-in;
+    }
+
+    &--item1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-inline: 4rem;
+      width: 1000px;
+      height: 100%;
+      background: url(../../../assets//images/banner/banner1.png);
+      border-radius: 0.5rem;
+      background-size: 1500px 750px;
+      background-repeat: no-repeat;
+      background-position: -100px -200px;
+
+      div {
+        height: 100%;
+      }
+
+      p {
+        margin-top: 5rem;
+        width: 25rem;
+        color: white;
+      }
+
+      h1 {
+        width: 600px;
+        color: white;
+        font-size: 44px;
+        margin-top: 3rem;
+      }
+
+      button {
+        width: 10rem;
+        margin-top: 2rem;
+        padding: 1rem;
+        border-radius: 2rem;
+        outline: none;
+        border: 1px solid rgba(255, 255, 255, 0.75);
+        background: none;
+        cursor: pointer;
+        color: white;
+        font-size: 16px;
+
+        &:active {
+          border: 1px solid rgba(0, 0, 0, 0.2);
+          background: white;
+          color: black;
+        }
+      }
+    }
+
+    &--item2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      padding-inline: 4rem;
+      width: 1000px;
+      height: 100%;
+      background: url(../../../assets//images/banner/banner2.png);
+      border-radius: 0.5rem;
+      background-size: 1500px 750px;
+      background-repeat: no-repeat;
+      background-position: -100px -200px;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+      }
+
+      p {
+        margin-top: 3rem;
+        width: 25rem;
+        color: white;
+      }
+
+      h1 {
+        width: 600px;
+        color: white;
+        font-size: 44px;
+        margin-top: 3rem;
+      }
+
+      button {
+        width: 10rem;
+        margin-top: 2rem;
+        padding: 1rem;
+        border-radius: 2rem;
+        outline: none;
+        border: 1px solid rgba(255, 255, 255, 0.75);
+        background: none;
+        cursor: pointer;
+        color: white;
+        font-size: 16px;
+
+        &:active {
+          border: 1px solid rgba(0, 0, 0, 0.2);
+          background: white;
+          color: black;
+        }
+      }
+    }
+
+    &--item3 {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      text-align: right;
+      padding-inline: 4rem;
+      width: 1000px;
+      height: 100%;
+      background: url(../../../assets//images/banner/banner3.png);
+      border-radius: 0.5rem;
+      background-size: 1500px 750px;
+      background-repeat: no-repeat;
+      background-position: -100px -200px;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        height: 100%;
+      }
+
+      p {
+        margin-top: 3rem;
+        width: 25rem;
+        color: white;
+      }
+
+      h1 {
+        width: 600px;
+        color: white;
+        font-size: 44px;
+        margin-top: 3rem;
+      }
+
+      button {
+        width: 10rem;
+        margin-top: 2rem;
+        padding: 1rem;
+        border-radius: 2rem;
+        outline: none;
+        border: 1px solid rgba(255, 255, 255, 0.75);
+        background: none;
+        cursor: pointer;
+        color: white;
+        font-size: 16px;
+
+        &:active {
+          border: 1px solid rgba(0, 0, 0, 0.2);
+          background: white;
+          color: black;
+        }
+      }
+    }
+  }
+  &__navigation {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    position: absolute;
+    left: 28rem;
+    bottom: 6rem;
+  }
+}
