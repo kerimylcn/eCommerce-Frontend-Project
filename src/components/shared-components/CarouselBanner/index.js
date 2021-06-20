@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FacebookBlue } from "../../../assets/icons/SVG";
 import "./carouselbanner.scss";
 
 const CarouselBanner = () => {
@@ -96,12 +97,20 @@ const CarouselBanner = () => {
         </ul>
       </div>
       <div className="carousel__side--wrapper">
-        <div className="carousel__side--discount"></div>
-        <div classname="carousel__side--text">
-          <p>text</p>
-          <p>text</p>
+        <div className="carousel__side--discount">
+          <h1>55%</h1>
+          <p>SUMMER SALES </p>
         </div>
-        <button>FOLLOW</button>
+        <div classname="carousel__side--text">
+          <p style={{ marginTop: "2rem" }}>Follow us on Facebook</p>
+          <p style={{ fontSize: "0.9rem" }}>
+            Sed ut perspiciatis unde omnis iste natus error sit
+          </p>
+        </div>
+        <button>
+          <FacebookBlue />
+          FOLLOW
+        </button>
       </div>
     </div>
   );

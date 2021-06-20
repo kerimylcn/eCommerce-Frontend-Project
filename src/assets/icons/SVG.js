@@ -115,6 +115,21 @@ export const Facebook = () => {
   );
 };
 
+export const FacebookBlue = () => {
+  return (
+    <svg width="9" height="18">
+      <svg xmlns="http://www.w3.org/2000/svg" width="9" height="18">
+        <path
+          paint-order="stroke fill markers"
+          fill-rule="evenodd"
+          fill="#4267B2"
+          d="M9 7H6V5c0-.662.72-1.076 1.034-1.076h1.922V1.01L6.308 1C3.368 1 3 3.61 3 5v2H1v3h2v8h3v-8h3V7z"
+        />
+      </svg>
+    </svg>
+  );
+};
+
 export const Google = () => {
   return (
     <svg width="19" height="17">

@@ -1,6 +1,7 @@
 .carousel {
   &__container {
     display: flex;
+    justify-content: space-around;
     height: 600px;
     padding: 2rem;
   }
@@ -8,14 +9,15 @@
   &__banner {
     &__container {
       width: 1000px;
+      height: 100%;
       position: relative;
       overflow: hidden;
     }
 
     &--wrapper {
-      //   overflow: hidden;
       width: 3000px;
       height: 500px;
+      border-radius: 4rem;
       display: flex;
       transition: margin 0.8s ease-in;
     }
@@ -25,10 +27,10 @@
       flex-direction: column;
       justify-content: center;
       padding-inline: 4rem;
+      border-radius: 0.5rem;
       width: 1000px;
       height: 100%;
       background: url(../../../assets//images/banner/banner1.png);
-      border-radius: 0.5rem;
       background-size: 1500px 750px;
       background-repeat: no-repeat;
       background-position: -100px -200px;
@@ -76,10 +78,10 @@
       justify-content: center;
       text-align: center;
       padding-inline: 4rem;
+      border-radius: 0.5rem;
       width: 1000px;
       height: 100%;
       background: url(../../../assets//images/banner/banner2.png);
-      border-radius: 0.5rem;
       background-size: 1500px 750px;
       background-repeat: no-repeat;
       background-position: -100px -200px;
@@ -130,10 +132,10 @@
       justify-content: flex-end;
       text-align: right;
       padding-inline: 4rem;
+      border-radius: 0.5rem;
       width: 1000px;
       height: 100%;
       background: url(../../../assets//images/banner/banner3.png);
-      border-radius: 0.5rem;
       background-size: 1500px 750px;
       background-repeat: no-repeat;
       background-position: -100px -200px;
@@ -178,6 +180,7 @@
       }
     }
   }
+
   &__navigation {
     margin: 0;
     padding: 0;
@@ -186,5 +189,56 @@
     position: absolute;
     left: 28rem;
     bottom: 6rem;
+  }
+
+  &__side {
+    &--wrapper {
+      width: 15rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: Center;
+
+      button {
+        color: #4267b2;
+        background: none;
+        border: 2px solid #4267b2;
+        border-radius: 3rem;
+        height: 2rem;
+        width: 8rem;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 0.8rem;
+        margin-top: 0.8rem;
+
+        &:active {
+          border: 2px solid black;
+        }
+      }
+    }
+
+    &--discount {
+      background: #84bc23e2;
+      height: 21rem;
+      justify-content: center;
+      border-radius: 0.4rem;
+
+      padding: 2rem;
+      color: white;
+
+      h1 {
+        font-size: 6rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      p {
+        font-size: 1.5rem;
+        padding-left: 10px;
+        width: 11rem;
+        margin: 0;
+      }
+    }
   }
 }
