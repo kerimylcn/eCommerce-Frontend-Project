@@ -1,8 +1,12 @@
 import { useState } from "react";
 import { FacebookBlue } from "../../../assets/icons/SVG";
+import { useAppContext } from "../../../context/state";
+import BannerImages from "../../../assets/images/banner/bannerimages";
+
 import "./carouselbanner.scss";
 
 const CarouselBanner = () => {
+  const state = useAppContext();
   const [navigationValue, setNavigationValue] = useState(0);
   const onClickHandler = (e) => {
     return setNavigationValue(parseInt(e.target.value));
@@ -18,15 +22,25 @@ const CarouselBanner = () => {
         <div
           className="carousel__banner--wrapper"
           style={
-            navigationValue === 0
+            navigationValue === 0 && state.size > 322
               ? { marginLeft: "0" }
-              : navigationValue === 1
+              : navigationValue === 1 && state.size > 322
               ? { marginLeft: "-62.5rem" }
-              : navigationValue === 2
+              : navigationValue === 2 && state.size > 322
               ? { marginLeft: "-125rem" }
-              : navigationValue === 3
+              : navigationValue === 3 && state.size > 322
               ? { marginLeft: "0" }
-              : navigationValue === 4
+              : navigationValue === 4 && state.size > 322
+              ? { marginLeft: "0" }
+              : navigationValue === 0 && state.size < 323
+              ? { marginLeft: "0" }
+              : navigationValue === 1 && state.size < 323
+              ? { marginLeft: "-16.1rem" }
+              : navigationValue === 2 && state.size < 323
+              ? { marginLeft: "-32.2rem" }
+              : navigationValue === 3 && state.size < 323
+              ? { marginLeft: "0" }
+              : navigationValue === 4 && state.size < 323
               ? { marginLeft: "0" }
               : { color: "black" }
           }
@@ -37,6 +51,7 @@ const CarouselBanner = () => {
               <p>{paragraph}</p>
               <button> VIEW MORE</button>
             </div>
+            <img src={BannerImages.banner1}></img>
           </div>
           <div className="carousel__banner--item2">
             <div>
@@ -44,6 +59,7 @@ const CarouselBanner = () => {
               <p>{paragraph}</p>
               <button> VIEW MORE</button>
             </div>
+            <img src={BannerImages.banner2}></img>
           </div>
           <div className="carousel__banner--item3">
             <div>
@@ -51,6 +67,7 @@ const CarouselBanner = () => {
               <p>{paragraph}</p>
               <button> VIEW MORE</button>
             </div>
+            <img src={BannerImages.banner3}></img>
           </div>
         </div>
         <ul className="carousel__navigation">
@@ -107,10 +124,12 @@ const CarouselBanner = () => {
             Sed ut perspiciatis unde omnis iste natus error sit
           </p>
         </div>
-        <button>
-          <FacebookBlue />
-          FOLLOW
-        </button>
+        <a href="https://www.facebook.com/OSFDigital/" target="_blank">
+          <button>
+            <FacebookBlue />
+            FOLLOW
+          </button>
+        </a>
       </div>
     </div>
   );
