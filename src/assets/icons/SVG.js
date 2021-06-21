@@ -206,12 +206,7 @@ export const LoadMore = () => {};
 
 export const Knowledge = () => {
   return (
-    <svg
-      width="56"
-      height="68"
-      xmlns="http://www.w3.org/2000/svg"
-      fill="#84bc22"
-    >
+    <svg viewBox="0 0 56 68" fill="#84bc22">
       <svg xmlns="http://www.w3.org/2000/svg" width="56" height="68">
         <path
           paint-order="stroke fill markers"
@@ -225,12 +220,7 @@ export const Knowledge = () => {
 
 export const Method = () => {
   return (
-    <svg
-      width="62"
-      height="60"
-      xmlns="http://www.w3.org/2000/svg"
-      fill="#84bc22"
-    >
+    <svg viewBox="0 0 62 60" fill="#84bc22">
       <svg xmlns="http://www.w3.org/2000/svg" width="62" height="60">
         <path
           paint-order="stroke fill markers"
@@ -244,12 +234,7 @@ export const Method = () => {
 
 export const Focus = () => {
   return (
-    <svg
-      width="60"
-      height="68"
-      xmlns="http://www.w3.org/2000/svg"
-      fill="#84bc22"
-    >
+    <svg viewBox="0 0 60 68" fill="#84bc22">
       <svg xmlns="http://www.w3.org/2000/svg" width="60" height="68">
         <path
           paint-order="stroke fill markers"
