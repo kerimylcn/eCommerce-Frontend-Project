@@ -13,6 +13,9 @@ function App() {
         <div className="App">
           <Header />
           <Switch>
+            <Route path="/category">
+              <div>Category Landing Page</div>
+            </Route>
             <Route path="/">
               <Homepage />
             </Route>

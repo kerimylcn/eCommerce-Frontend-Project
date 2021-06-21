@@ -5,7 +5,7 @@
   overflow: hidden;
 
   background: #262a32;
-  height: 550px;
+  height: 575px;
   color: white;
 
   &--items {
@@ -16,7 +16,7 @@
     &--container {
       display: flex;
       width: 100%;
-      margin-left: -0rem;
+      margin-left: 0rem;
       transition: margin 0.5s ease-in-out;
 
       .productHover__alt {
@@ -69,5 +69,24 @@
         background: white;
       }
     }
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .products__container--items--container {
+    margin-left: 15rem;
+  }
+}
+@media (min-width: 781px) and (max-width: 1280px) {
+  .products__container--items--container {
+    margin-left: 2.5rem;
+    .productHover {
+      width: 280px;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 781px) {
+  .products__container {
+    display: none;
   }
 }

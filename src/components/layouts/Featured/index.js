@@ -1,24 +1,32 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useAppContext } from "../../../context/state";
 import ProductTile from "../../shared-components/ProductTile";
 import "./featuredproducts.scss";
 
 const FeaturedProducts = () => {
-  const [navigationValue, setNavigationValue] = useState(0);
+  const [navigationValue, setNavigationValue] = useState(false);
   const state = useAppContext();
 
+  useEffect(() => {
+    setTimeout(() => setNavigationValue(!navigationValue), 5000);
+  });
+
   const onClickHandlerLeft = () => {
-    return navigationValue == 0 ? setNavigationValue(1) : setNavigationValue(0);
+    return navigationValue == false
+      ? setNavigationValue(true)
+      : setNavigationValue(false);
   };
 
   const onClickHandlerRight = () => {
-    return navigationValue == 1 ? setNavigationValue(0) : setNavigationValue(1);
+    return navigationValue == true
+      ? setNavigationValue(false)
+      : setNavigationValue(true);
   };
 
   return (
     <div
       className="products__container"
-      style={state.size <= 480 ? { display: "none" } : { display: "flex" }}
+      style={state.size <= 720 ? { display: "none" } : { display: "flex" }}
     >
       <h1 className="products__container--header">Featured Products</h1>
       <p className="products__container--paragraph">
@@ -36,9 +44,13 @@ const FeaturedProducts = () => {
         <div
           className="products__container--items--container"
           style={
-            navigationValue == 0
+            navigationValue === false && state.size > 1281
               ? { marginLeft: "0" }
-              : { marginLeft: "-62rem" }
+              : navigationValue === false && state.size > 1281
+              ? { marginLeft: "-62rem" }
+              : navigationValue === false && state.size < 1281
+              ? { marginLeft: "2.5rem" }
+              : { marginLeft: "-62.2rem" }
           }
         >
           <div style={{ display: "flex" }}>

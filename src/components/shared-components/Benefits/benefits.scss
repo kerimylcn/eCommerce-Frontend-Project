@@ -1,0 +1,30 @@
+.benefits {
+  display: flex;
+  padding: 2.8rem;
+  background: #45413e;
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    &:not(:last-child) {
+      margin-right: 3rem;
+    }
+
+    svg {
+      margin-top: 0.5rem;
+      width: 80%;
+    }
+
+    & > div {
+      h3 {
+        margin-top: 0;
+        color: white;
+      }
+
+      span {
+        color: rgba(255, 255, 255, 0.4);
+      }
+    }
+  }
+}
