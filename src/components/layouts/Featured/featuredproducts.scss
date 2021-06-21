@@ -1,0 +1,73 @@
+.products__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+
+  background: #262a32;
+  height: 550px;
+  color: white;
+
+  &--items {
+    display: flex;
+    width: 83rem;
+    overflow: hidden;
+
+    &--container {
+      display: flex;
+      width: 100%;
+      margin-left: -0rem;
+      transition: margin 0.5s ease-in-out;
+
+      .productHover__alt {
+        p:first-of-type {
+          color: black;
+        }
+        &--price {
+          color: #3ec779;
+        }
+      }
+
+      .productButton {
+        display: none;
+      }
+      .productMessage {
+        display: none;
+      }
+    }
+  }
+
+  &--controller {
+    display: flex;
+    align-items: center;
+    &--line {
+      width: 15rem;
+      height: 1px;
+      border: 1px solid rgba(255, 255, 255, 0.8);
+    }
+
+    &--mid {
+      font-size: 32px;
+      padding-inline: 0.8rem;
+      color: rgba(255, 255, 255, 0.8);
+      cursor: default;
+    }
+
+    button {
+      width: 2rem;
+      height: 2rem;
+      cursor: pointer;
+      background: #303239;
+      border: none;
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0.5rem;
+
+      &:active {
+        color: #303239;
+        background: white;
+      }
+    }
+  }
+}

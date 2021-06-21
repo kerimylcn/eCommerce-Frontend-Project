@@ -1,3 +1,5 @@
+import React from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { AppWrapper } from "./context/state";
 import Header from "./components/layouts/Header";
 import Footer from "./components/layouts/Footer";
@@ -6,13 +8,19 @@ import "./App.scss";
 
 function App() {
   return (
-    <AppWrapper>
-      <div className="App">
-        <Header />
-        <Homepage />
-        <Footer />
-      </div>
-    </AppWrapper>
+    <Router>
+      <AppWrapper>
+        <div className="App">
+          <Header />
+          <Switch>
+            <Route path="/">
+              <Homepage />
+            </Route>
+          </Switch>
+          <Footer />
+        </div>
+      </AppWrapper>
+    </Router>
   );
 }
 

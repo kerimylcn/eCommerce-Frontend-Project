@@ -18,6 +18,7 @@
   }
 
   &__container {
+    height: 20rem;
     width: 100%;
     &__section {
       display: flex;
@@ -127,6 +128,7 @@
     }
 
     &__container {
+      height: auto;
       margin: 0;
       &__section {
         flex-direction: column;

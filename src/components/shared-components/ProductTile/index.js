@@ -26,7 +26,7 @@ const ProductTile = (props) => {
       <img src={props.image} alt={props.name} />
       <div className="productHover__alt">
         <p>{props.name}</p>
-        <p className="productHover__alt--price">$ {props.price}</p>
+        <p className="productHover__alt--price">{props.price}</p>
       </div>
     </div>
   ) : (
@@ -36,7 +36,7 @@ const ProductTile = (props) => {
         <p>{props.name}</p>
         <button>
           <div>
-            <span>${props.price}</span>
+            <span>{props.price}</span>
           </div>
           <span>BUY NOW</span>
         </button>

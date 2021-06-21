@@ -5,6 +5,8 @@ import BannerImages from "../../../assets/images/banner/bannerimages";
 
 import "./carouselbanner.scss";
 
+// 720 PX left
+
 const CarouselBanner = () => {
   const state = useAppContext();
   const [navigationValue, setNavigationValue] = useState(0);
@@ -32,15 +34,15 @@ const CarouselBanner = () => {
               ? { marginLeft: "0" }
               : navigationValue === 4 && state.size > 322
               ? { marginLeft: "0" }
-              : navigationValue === 0 && state.size < 323
+              : navigationValue === 0 && state.size <= 322
               ? { marginLeft: "0" }
-              : navigationValue === 1 && state.size < 323
+              : navigationValue === 1 && state.size <= 322
               ? { marginLeft: "-16.1rem" }
-              : navigationValue === 2 && state.size < 323
+              : navigationValue === 2 && state.size <= 322
               ? { marginLeft: "-32.2rem" }
-              : navigationValue === 3 && state.size < 323
+              : navigationValue === 3 && state.size <= 322
               ? { marginLeft: "0" }
-              : navigationValue === 4 && state.size < 323
+              : navigationValue === 4 && state.size <= 322
               ? { marginLeft: "0" }
               : { color: "black" }
           }

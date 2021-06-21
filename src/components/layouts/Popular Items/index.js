@@ -49,7 +49,7 @@ const PopularItems = () => {
             image={product.image}
             name={product.name}
             time={product.time}
-            price={product.price}
+            price={`$ ${product.price}`}
             button={product.button}
             hover={product.hover}
             icon={product.icon}
