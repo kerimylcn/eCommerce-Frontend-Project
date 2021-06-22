@@ -35,8 +35,8 @@ An eCommerce Frontend Project that given as task by OSF Academy Instructors.
 
 - [ ] **HOMEPAGE**
 
-- [ ] Breadcrumbs
-- [ ] Filters
+  - [ ] Breadcrumbs
+  - [ ] Filters
 
 - [ ] **PRODUCT DETAILED PAGE**
 

@@ -8,6 +8,7 @@ import "./popularitems.scss";
 // Product Tile1
 // favid will match, if it's already in it then it will remove it.
 // style nav buttons
+//svg load morem
 
 const PopularItems = () => {
   const state = useAppContext();

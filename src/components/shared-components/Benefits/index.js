@@ -1,6 +1,8 @@
 import { Knowledge, Method, Focus } from "../../../assets/icons/SVG.js";
 import "./benefits.scss";
 
+//720p left
+
 const Benefits = () => {
   return (
     <div className="benefits">

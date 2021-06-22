@@ -4,6 +4,9 @@ import { AppWrapper } from "./context/state";
 import Header from "./components/layouts/Header";
 import Footer from "./components/layouts/Footer";
 import Homepage from "./components/pages/Homepage";
+import FeaturedProducts from "./components/layouts/Featured";
+import CategoryLanding from "./components/pages/Category";
+
 import "./App.scss";
 
 function App() {
@@ -14,12 +17,13 @@ function App() {
           <Header />
           <Switch>
             <Route path="/category">
-              <div>Category Landing Page</div>
+              <CategoryLanding />
             </Route>
             <Route path="/">
               <Homepage />
             </Route>
           </Switch>
+          <FeaturedProducts />
           <Footer />
         </div>
       </AppWrapper>
