@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./filters.scss";
 
 const Filters = () => {
@@ -12,7 +13,8 @@ const Filters = () => {
               name="prices"
               id="price-select"
             >
-              <option>$0.00 -- $100.00</option>
+              <option>$0.00 - $100.00</option>
+              <option>$100.00 - $1000.00</option>
             </select>
           </li>
           <li className="filter__container__wrapper--item">
@@ -167,6 +169,7 @@ const Filters = () => {
               id="sort-select"
             >
               <option>Price</option>
+              <option>Size</option>
             </select>
           </li>
         </div>
@@ -179,6 +182,7 @@ const Filters = () => {
               id="size-select"
             >
               <option>Small</option>
+              <option>Medium</option>
             </select>
           </li>
           <li className="filter__container__wrapper--item">
@@ -189,6 +193,7 @@ const Filters = () => {
               id="show-select"
             >
               <option>16 per page</option>
+              <option>32 per page</option>
             </select>
           </li>
         </div>

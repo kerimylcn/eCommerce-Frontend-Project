@@ -1,0 +1,35 @@
+.results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  button {
+    color: white;
+    background: #84bc22;
+    height: 2.5rem;
+    width: 10rem;
+    border-radius: 5rem;
+    border: none;
+    margin: 7rem 0 6rem 0;
+
+    &:active {
+      background: black;
+      font-weight: 800;
+    }
+  }
+  &--title {
+    font-size: 12px;
+    padding-block: 1rem;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .productMessage,
+    .productButton {
+      display: none;
+    }
+  }
+}

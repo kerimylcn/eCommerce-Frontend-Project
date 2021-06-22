@@ -33,10 +33,11 @@ An eCommerce Frontend Project that given as task by OSF Academy Instructors.
         (5.2 LOAD MORE WILL GET 4 MORE ITEMS BY AJAX REQUEST)
         (CAROUSEL 720p left)
 
-- [ ] **HOMEPAGE**
+- [x] **HOMEPAGE**
 
-  - [ ] Breadcrumbs
-  - [ ] Filters
+  - [x] Breadcrumbs(home router to /home need to be done)
+  - [x] Filters (listed products will be done)
+        (responsive)
 
 - [ ] **PRODUCT DETAILED PAGE**
 
