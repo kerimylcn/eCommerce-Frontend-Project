@@ -36,7 +36,7 @@ An eCommerce Frontend Project that given as task by OSF Academy Instructors.
 - [x] **HOMEPAGE**
 
   - [x] Breadcrumbs(home router to /home need to be done)
-  - [x] Filters (listed products will be done)
+  - [x] Filters (select design arrow)
         (responsive)
 
 - [ ] **PRODUCT DETAILED PAGE**

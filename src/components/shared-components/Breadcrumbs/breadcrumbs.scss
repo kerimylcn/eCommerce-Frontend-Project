@@ -28,3 +28,13 @@
     }
   }
 }
+
+@media screen and(max-width: 320px ) {
+  .breadcrumbs {
+    &__title {
+      h1 {
+        margin: 1rem;
+      }
+    }
+  }
+}

@@ -8,7 +8,7 @@ const Results = () => {
   return (
     <div className="results">
       <span className="results--title">
-        {state.productData.length} results in apparel
+        {state.productData.length - 2} results in apparel
       </span>
       <div className="results__wrapper">
         {state.productData.map((product) => (
@@ -27,7 +27,7 @@ const Results = () => {
           />
         ))}
       </div>
-      <button>LOAD MORE</button>
+      <button className="results--button">LOAD MORE</button>
     </div>
   );
 };

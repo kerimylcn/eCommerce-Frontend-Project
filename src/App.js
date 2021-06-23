@@ -4,8 +4,8 @@ import { AppWrapper } from "./context/state";
 import Header from "./components/layouts/Header";
 import Footer from "./components/layouts/Footer";
 import Homepage from "./components/pages/Homepage";
-import FeaturedProducts from "./components/layouts/Featured";
 import CategoryLanding from "./components/pages/Category";
+import ProductDetailPage from "./components/pages/ProductDetail";
 
 import "./App.scss";
 
@@ -19,11 +19,13 @@ function App() {
             <Route path="/category">
               <CategoryLanding />
             </Route>
+            <Route Path="/productdetail">
+              <ProductDetailPage />
+            </Route>
             <Route path="/">
               <Homepage />
             </Route>
           </Switch>
-          <FeaturedProducts />
           <Footer />
         </div>
       </AppWrapper>

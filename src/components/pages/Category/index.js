@@ -1,3 +1,4 @@
+import FeaturedProducts from "../../layouts/Featured";
 import Results from "../../layouts/Results";
 import Breadcrumbs from "../../shared-components/Breadcrumbs";
 import Filters from "../../shared-components/Filters";
@@ -10,6 +11,7 @@ const CategoryLanding = () => {
       <Breadcrumbs />
       <Filters />
       <Results />
+      <FeaturedProducts />
     </div>
   );
 };

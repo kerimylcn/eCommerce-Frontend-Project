@@ -14,6 +14,7 @@ export function AppWrapper({ children }) {
   const [footerCategories, setFooterCategories] = useState(true);
   const [footerAbout, setFooterAbout] = useState(true);
   const [popularItemsSlicer, setPopularItemsSlicer] = useState(8);
+  const [isLoginShow, setIsLoginShow] = useState(false);
 
   const [productData, setProductData] = useState([
     {
@@ -113,6 +114,7 @@ export function AppWrapper({ children }) {
   const footerContactHandler = () => setFooterContact(!footerContact);
   const footerCategoriesHandler = () => setFooterCategories(!footerCategories);
   const footerAboutHandler = () => setFooterAbout(!footerAbout);
+  const isLoginHandler = () => setIsLoginShow(!isLoginShow);
 
   const [size, setSize] = useState(window.innerWidth);
 
@@ -166,6 +168,8 @@ export function AppWrapper({ children }) {
     footerAboutHandler,
     productData,
     popularItemsSlicer,
+    isLoginShow,
+    isLoginHandler,
   };
 
   return (

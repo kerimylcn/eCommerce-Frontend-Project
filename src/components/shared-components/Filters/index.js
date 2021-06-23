@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import "./filters.scss";
 
+//Home link olayı yapılacak, selectlerin okunun stilizasyonu yapılacak
+//onclick handler to cart and fav
+
 const Filters = () => {
   return (
     <div className="filter">
