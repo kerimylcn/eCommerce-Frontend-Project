@@ -37,171 +37,185 @@ const ProductDetail = (props) => {
 
   return (
     <div className="detail">
-      <div className="detail__item--a">
-        <img src={selectedImage} />
-      </div>
-      <div className="detail__item--b">
-        <label for="image-select1" className="detail__item--b__thumbnail">
-          <input
-            className="detail__item--b__thumbnail--input"
-            type="radio"
-            name="images"
-            id="image-select1"
-          ></input>
-          <div className="detail__item--b__thumbnail--sImages">
-            <img
-              onClick={() => (
-                setSelectedImage(props.imageFirst), setSelectedColor(0)
-              )}
-              src={props.imageFirstSmall}
-            />
-          </div>
-        </label>
-        <label for="image-select2" className="detail__item--b__thumbnail">
-          <input
-            className="detail__item--b__thumbnail--input"
-            type="radio"
-            name="images"
-            id="image-select2"
-          ></input>
-          <div className="detail__item--b__thumbnail--sImages">
-            <img
-              onClick={() => (
-                setSelectedImage(props.imageFirstBehind), setSelectedColor(0)
-              )}
-              src={props.imageFirstSmallBehind}
-            />
-          </div>
-        </label>
-        <label for="image-select3" className="detail__item--b__thumbnail">
-          <input
-            className="detail__item--b__thumbnail--input"
-            type="radio"
-            name="images"
-            id="image-select3"
-          ></input>
-          <div className="detail__item--b__thumbnail--sImages">
-            <img
-              onClick={() => (
-                setSelectedImage(props.imageSecond), setSelectedColor(1)
-              )}
-              src={props.imageSecondSmall}
-            />
-          </div>
-        </label>
-        <label for="image-select4" className="detail__item--b__thumbnail">
-          <input
-            className="detail__item--b__thumbnail--input"
-            type="radio"
-            name="images"
-            id="image-select4"
-          ></input>
-          <div className="detail__item--b__thumbnail--sImages">
-            <img
-              onClick={() => (
-                setSelectedImage(props.imageSecondBehind), setSelectedColor(1)
-              )}
-              src={props.imageSecondSmallBehind}
-            />
-          </div>
-        </label>
-      </div>
-      <div className="detail__item--c">
-        <h1>${price}</h1>
-
-        <div
-          className="detail__item--c__colorSelect"
-          onClick={() => state.isColorHandler()}
-          style={
-            state.isColorClicked
-              ? { height: "5.5em", borderRadius: "0em" }
-              : null
-          }
-        >
-          <div
-            className="detail__item--c__colorSelect__select"
-            style={state.isColorClicked ? { borderRadius: "0em" } : null}
-            onClick={() => setSelectedColor(0)}
+      <div className="detail__wrapper">
+        <div className="detail__wrapper__item--a">
+          <img src={selectedImage} />
+        </div>
+        <div className="detail__wrapper__item--b">
+          <label
+            for="image-select1"
+            className="detail__wrapper__item--b__thumbnail"
           >
-            <div
-              className="detail__item--c__colorSelect__select--color"
-              style={
-                selectedColor === 0
-                  ? { background: "#585d61" }
-                  : { background: "rgb(5, 195, 221)" }
-              }
-            ></div>
-            <div className="detail__item--c__colorSelect__select--name">
-              {selectedColor === 0 ? "Dark Grey" : "Aqua Blue"}
+            <input
+              className="detail__wrapper__item--b__thumbnail--input"
+              type="radio"
+              name="images"
+              id="image-select1"
+            ></input>
+            <div className="detail__wrapper__item--b__thumbnail--sImages">
+              <img
+                onClick={() => (
+                  setSelectedImage(props.imageFirst), setSelectedColor(0)
+                )}
+                src={props.imageFirstSmall}
+              />
             </div>
-            <div
-              style={
-                state.isColorClicked ? { transform: "rotate(180deg)" } : null
-              }
-            >
-              <ArrowDown />
+          </label>
+          <label
+            for="image-select2"
+            className="detail__wrapper__item--b__thumbnail"
+          >
+            <input
+              className="detail__wrapper__item--b__thumbnail--input"
+              type="radio"
+              name="images"
+              id="image-select2"
+            ></input>
+            <div className="detail__wrapper__item--b__thumbnail--sImages">
+              <img
+                onClick={() => (
+                  setSelectedImage(props.imageFirstBehind), setSelectedColor(0)
+                )}
+                src={props.imageFirstSmallBehind}
+              />
             </div>
-          </div>
+          </label>
+          <label
+            for="image-select3"
+            className="detail__wrapper__item--b__thumbnail"
+          >
+            <input
+              className="detail__wrapper__item--b__thumbnail--input"
+              type="radio"
+              name="images"
+              id="image-select3"
+            ></input>
+            <div className="detail__wrapper__item--b__thumbnail--sImages">
+              <img
+                onClick={() => (
+                  setSelectedImage(props.imageSecond), setSelectedColor(1)
+                )}
+                src={props.imageSecondSmall}
+              />
+            </div>
+          </label>
+          <label
+            for="image-select4"
+            className="detail__wrapper__item--b__thumbnail"
+          >
+            <input
+              className="detail__wrapper__item--b__thumbnail--input"
+              type="radio"
+              name="images"
+              id="image-select4"
+            ></input>
+            <div className="detail__wrapper__item--b__thumbnail--sImages">
+              <img
+                onClick={() => (
+                  setSelectedImage(props.imageSecondBehind), setSelectedColor(1)
+                )}
+                src={props.imageSecondSmallBehind}
+              />
+            </div>
+          </label>
+        </div>
+        <div className="detail__wrapper__item--c">
+          <h1>${price}</h1>
+
           <div
-            className="detail__item--c__colorSelect__select"
+            className="detail__wrapper__item--c__colorSelect"
+            onClick={() => state.isColorHandler()}
             style={
               state.isColorClicked
-                ? { display: "flex", borderRadius: "0em" }
-                : { display: "none" }
+                ? { height: "5.5em", borderRadius: "0em" }
+                : null
             }
-            onClick={() => setSelectedColor(1)}
           >
             <div
-              className="detail__item--c__colorSelect__select--color"
-              style={{ background: "#05C3DD" }}
-            ></div>
-            <div className="detail__item--c__colorSelect__select2-name">
-              Aqua Blue
+              className="detail__wrapper__item--c__colorSelect__select"
+              style={state.isColorClicked ? { borderRadius: "0em" } : null}
+              onClick={() => setSelectedColor(0)}
+            >
+              <div
+                className="detail__wrapper__item--c__colorSelect__select--color"
+                style={
+                  selectedColor === 0
+                    ? { background: "#585d61" }
+                    : { background: "rgb(5, 195, 221)" }
+                }
+              ></div>
+              <div className="detail__wrapper__item--c__colorSelect__select--name">
+                {selectedColor === 0 ? "Dark Grey" : "Aqua Blue"}
+              </div>
+              <div
+                style={
+                  state.isColorClicked ? { transform: "rotate(180deg)" } : null
+                }
+              >
+                <ArrowDown />
+              </div>
+            </div>
+            <div
+              className="detail__wrapper__item--c__colorSelect__select"
+              style={
+                state.isColorClicked
+                  ? { display: "flex", borderRadius: "0em" }
+                  : { display: "none" }
+              }
+              onClick={() => setSelectedColor(1)}
+            >
+              <div
+                className="detail__wrapper__item--c__colorSelect__select--color"
+                style={{ background: "#05C3DD" }}
+              ></div>
+              <div className="detail__wrapper__item--c__colorSelect__select2-name">
+                Aqua Blue
+              </div>
             </div>
           </div>
-        </div>
-        <div className="detail__item--c__valueCart">
-          <div className="detail__item--c__valueCart__wrapper">
-            <div className="detail__item--c__valueCart__wrapper--buttonWrapper">
-              <button onClick={() => onClickHandlerMinus()}>-</button>
-              <span>{value}</span>
-              <button onClick={() => onClickHandlerSum()}>+</button>
+          <div className="detail__wrapper__item--c__valueCart">
+            <div className="detail__wrapper__item--c__valueCart__wrapper">
+              <div className="detail__wrapper__item--c__valueCart__wrapper--buttonWrapper">
+                <button onClick={() => onClickHandlerMinus()}>-</button>
+                <span>{value}</span>
+                <button onClick={() => onClickHandlerSum()}>+</button>
+              </div>
+              <button className="detail__wrapper__item--c__valueCart__wrapper--addCart">
+                ADD TO CART
+              </button>
             </div>
-            <button className="detail__item--c__valueCart__wrapper--addCart">
-              ADD TO CART
-            </button>
+            <p>{info.slice(0, readMore ? 500 : 300)}</p>
+            <span
+              className="detail__wrapper__item--c__valueCart__wrapper--readMore"
+              onClick={() => readMoreHandler()}
+            >
+              Read more
+            </span>
           </div>
-          <p>{info.slice(0, readMore ? 500 : 300)}</p>
-          <span
-            className="detail__item--c__valueCart__wrapper--readMore"
-            onClick={() => readMoreHandler()}
-          >
-            Read more
-          </span>
+          <ul className="detail__wrapper__item--c--social">
+            <li>Share</li>
+            <li>
+              <a href="https://www.facebook.com/OSFDigital/" target="_blank">
+                <Facebook />
+              </a>
+            </li>
+            <li>
+              <a href="https://osf.digital/" target="_blank">
+                <Google />
+              </a>
+            </li>
+            <li>
+              <a href="https://osf.digital/" target="_blank">
+                <Pinterest />
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/osfdigital" target="_blank">
+                <Twitter />
+              </a>
+            </li>
+          </ul>
         </div>
-        <ul className="detail__item--c--social">
-          <li>Share</li>
-          <li>
-            <a href="https://www.facebook.com/OSFDigital/" target="_blank">
-              <Facebook />
-            </a>
-          </li>
-          <li>
-            <a href="https://osf.digital/" target="_blank">
-              <Google />
-            </a>
-          </li>
-          <li>
-            <a href="https://osf.digital/" target="_blank">
-              <Pinterest />
-            </a>
-          </li>
-          <li>
-            <a href="https://twitter.com/osfdigital" target="_blank">
-              <Twitter />
-            </a>
-          </li>
-        </ul>
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import ProductDetail from "../../shared-components/ProductDetail";
 import DetailedImages from "../../../assets/images/productdetail/detailedImages.js";
 import Tabs from "../../shared-components/Tabs";
+import PopularItems from "../../layouts/Popular Items";
 import "./productdetail.scss";
 
 const ProductDetailPage = () => {
@@ -17,6 +18,7 @@ const ProductDetailPage = () => {
         imageSecondSmallBehind={DetailedImages.product2smallbehind}
       />
       <Tabs />
+      <PopularItems sliceValue={5} />
     </div>
   );
 };

@@ -2,4 +2,50 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-content: center;
+  align-items: center;
+  background: #f1edea;
+
+  .popular {
+    background: none;
+
+    &__line {
+      &--container {
+        background: none;
+        padding: 4rem 4rem 1rem 4rem;
+      }
+      &--border {
+        border: 1px solid black;
+      }
+
+      &--title {
+        background: #f1edea;
+        color: black;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 20px;
+      }
+    }
+    &__item {
+      &--container {
+        background: none;
+      }
+    }
+
+    &__button {
+      &--wrapper {
+        button {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .productHover {
+    width: 280px;
+    margin: 1.5rem;
+  }
+  .productButton {
+    display: none;
+  }
 }

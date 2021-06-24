@@ -10,7 +10,7 @@ import "./popularitems.scss";
 // style nav buttons
 //svg load morem
 
-const PopularItems = () => {
+const PopularItems = (props) => {
   const state = useAppContext();
   const [navigationValue, setNavigationValue] = useState(0);
 
@@ -44,7 +44,7 @@ const PopularItems = () => {
             : { color: "black" }
         }
       >
-        {state.productData.slice(0, state.popularItemsSlicer).map((product) => (
+        {state.productData.slice(0, props.sliceValue).map((product) => (
           <ProductTile
             id={product.id}
             image={product.image}

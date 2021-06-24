@@ -6,7 +6,7 @@ import Footer from "./components/layouts/Footer";
 import Homepage from "./components/pages/Homepage";
 import CategoryLanding from "./components/pages/Category";
 import ProductDetailPage from "./components/pages/ProductDetail";
-
+import Benefits from "./components/shared-components/Benefits";
 import "./App.scss";
 
 //router yapisi
@@ -28,6 +28,7 @@ function App() {
               <Homepage />
             </Route>
           </Switch>
+          <Benefits />
           <Footer />
         </div>
       </AppWrapper>

@@ -11,7 +11,6 @@ const Homepage = () => {
       <PopularItems />
       <Banner />
       <FeaturedProducts />
-      <Benefits />
     </div>
   );
 };
