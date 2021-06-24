@@ -9,6 +9,8 @@ import ProductDetailPage from "./components/pages/ProductDetail";
 
 import "./App.scss";
 
+//router yapisi
+
 function App() {
   return (
     <Router>
@@ -16,11 +18,11 @@ function App() {
         <div className="App">
           <Header />
           <Switch>
-            <Route path="/category">
-              <CategoryLanding />
-            </Route>
             <Route Path="/productdetail">
               <ProductDetailPage />
+            </Route>
+            <Route path="/category">
+              <CategoryLanding />
             </Route>
             <Route path="/">
               <Homepage />

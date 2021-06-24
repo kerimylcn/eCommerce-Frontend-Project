@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { useAppContext } from "../../../context/state";
 import "./productdetail.scss";
 import {
   Facebook,
   Google,
   Twitter,
   Pinterest,
+  ArrowDown,
 } from "../../../assets/icons/SVG";
 
 //product detail 2 kaldı sadece
@@ -14,10 +16,13 @@ const ProductDetail = (props) => {
   const [value, setValue] = useState(1);
   const [readMore, setReadMore] = useState(false);
   const [selectedImage, setSelectedImage] = useState(props.imageFirst);
+  const [selectedColor, setSelectedColor] = useState(0); // 0 = Dark Grey, 1 = Aqua Blue;
+
+  const state = useAppContext();
 
   const onClickHandlerSum = () => {
     setValue(value + 1);
-    setPrice(price + 300.0);
+    setPrice(price + 300);
   };
   const onClickHandlerMinus = () => {
     value > 1 ? setValue(value - 1) : setValue(value);
@@ -95,9 +100,58 @@ const ProductDetail = (props) => {
       </div>
       <div className="detail__item--c">
         <h1>${price}</h1>
-        <select>
-          <option>Dark Gray</option>
-        </select>
+
+        <div
+          className="detail__item--c__colorSelect"
+          onClick={() => state.isColorHandler()}
+          style={
+            state.isColorClicked
+              ? { height: "5.5em", borderRadius: "0em" }
+              : null
+          }
+        >
+          <div
+            className="detail__item--c__colorSelect__select"
+            style={state.isColorClicked ? { borderRadius: "0em" } : null}
+            onClick={() => setSelectedColor(0)}
+          >
+            <div
+              className="detail__item--c__colorSelect__select--color"
+              style={
+                selectedColor === 0
+                  ? { background: "#585d61" }
+                  : { background: "rgb(5, 195, 221)" }
+              }
+            ></div>
+            <div className="detail__item--c__colorSelect__select--name">
+              {selectedColor === 0 ? "Dark Grey" : "Aqua Blue"}
+            </div>
+            <div
+              style={
+                state.isColorClicked ? { transform: "rotate(180deg)" } : null
+              }
+            >
+              <ArrowDown />
+            </div>
+          </div>
+          <div
+            className="detail__item--c__colorSelect__select"
+            style={
+              state.isColorClicked
+                ? { display: "flex", borderRadius: "0em" }
+                : { display: "none" }
+            }
+            onClick={() => setSelectedColor(1)}
+          >
+            <div
+              className="detail__item--c__colorSelect__select--color"
+              style={{ background: "#05C3DD" }}
+            ></div>
+            <div className="detail__item--c__colorSelect__select2-name">
+              Aqua Blue
+            </div>
+          </div>
+        </div>
         <div className="detail__item--c__valueCart">
           <div className="detail__item--c__valueCart__wrapper">
             <div className="detail__item--c__valueCart__wrapper--buttonWrapper">
