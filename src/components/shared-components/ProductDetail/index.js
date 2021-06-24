@@ -50,7 +50,9 @@ const ProductDetail = (props) => {
           ></input>
           <div className="detail__item--b__thumbnail--sImages">
             <img
-              onClick={() => setSelectedImage(props.imageFirst)}
+              onClick={() => (
+                setSelectedImage(props.imageFirst), setSelectedColor(0)
+              )}
               src={props.imageFirstSmall}
             />
           </div>
@@ -64,7 +66,9 @@ const ProductDetail = (props) => {
           ></input>
           <div className="detail__item--b__thumbnail--sImages">
             <img
-              onClick={() => setSelectedImage(props.imageFirstBehind)}
+              onClick={() => (
+                setSelectedImage(props.imageFirstBehind), setSelectedColor(0)
+              )}
               src={props.imageFirstSmallBehind}
             />
           </div>
@@ -78,7 +82,9 @@ const ProductDetail = (props) => {
           ></input>
           <div className="detail__item--b__thumbnail--sImages">
             <img
-              onClick={() => setSelectedImage(props.imageSecond)}
+              onClick={() => (
+                setSelectedImage(props.imageSecond), setSelectedColor(1)
+              )}
               src={props.imageSecondSmall}
             />
           </div>
@@ -92,7 +98,9 @@ const ProductDetail = (props) => {
           ></input>
           <div className="detail__item--b__thumbnail--sImages">
             <img
-              onClick={() => setSelectedImage(props.imageSecondBehind)}
+              onClick={() => (
+                setSelectedImage(props.imageSecondBehind), setSelectedColor(1)
+              )}
               src={props.imageSecondSmallBehind}
             />
           </div>

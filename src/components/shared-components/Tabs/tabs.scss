@@ -1,0 +1,36 @@
+.tabs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__sections {
+    display: flex;
+    justify-content: center;
+    h2 {
+      color: black;
+      opacity: 0.4;
+      cursor: pointer;
+      background: white;
+      margin: 0;
+      padding: 1rem 2.5rem;
+      border-radius: 1em 1em 0 0;
+
+      transition: all 0.3s ease-out;
+      &:not(:last-of-type) {
+        margin-right: 4rem;
+      }
+    }
+  }
+
+  &__information {
+    width: 100%;
+    padding: 2rem;
+    background-color: #262a33;
+    line-height: 1.6rem;
+    font-size: 14px;
+    color: white;
+    & > div > p:first-of-type {
+      margin-right: 5em;
+    }
+  }
+}
