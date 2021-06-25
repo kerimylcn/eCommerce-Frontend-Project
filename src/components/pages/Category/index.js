@@ -9,7 +9,11 @@ import "./categorylanding.scss";
 const CategoryLanding = () => {
   return (
     <div className="category">
-      <Breadcrumbs />
+      <Breadcrumbs
+        first={"Home"}
+        second={"Category Landing"}
+        title={"Services"}
+      />
       <Filters />
       <Results />
       <FeaturedProducts />

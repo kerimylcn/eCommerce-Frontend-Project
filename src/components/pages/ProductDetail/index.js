@@ -2,11 +2,19 @@ import ProductDetail from "../../shared-components/ProductDetail";
 import DetailedImages from "../../../assets/images/productdetail/detailedImages.js";
 import Tabs from "../../shared-components/Tabs";
 import PopularItems from "../../layouts/Popular Items";
-import "./productdetail.scss";
+import Breadcrumbs from "../../shared-components/Breadcrumbs";
 
+import "./productdetail.scss";
+//720 p left
 const ProductDetailPage = () => {
   return (
     <div className="productDetail">
+      <Breadcrumbs
+        first={"Home"}
+        second={"OSF Theme"}
+        third={`/ Ruffle Front V-Neck Cardigan`}
+        title={"Ruffle Front V-Neck Cardigan"}
+      />
       <ProductDetail
         imageFirst={DetailedImages.product1}
         imageFirstBehind={DetailedImages.product1behind}

@@ -1,0 +1,27 @@
+.error {
+  background: #f1edea;
+  padding: 0 3rem 3rem 3rem;
+
+  .breadcrumbs {
+    &__item {
+      span:first-of-type {
+        color: #84bc22;
+      }
+    }
+    &__title {
+      div {
+        background: rgba(0, 0, 0, 0.2);
+      }
+
+      h1 {
+        margin: 2rem;
+      }
+    }
+  }
+}
+
+@media screen and(max-width:320px) {
+  .error {
+    padding: 0 1rem 1rem 1rem;
+  }
+}

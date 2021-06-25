@@ -6,6 +6,22 @@
   align-items: center;
   background: #f1edea;
 
+  .breadcrumbs {
+    width: 100%;
+    padding-inline: 4 3.5rem;
+
+    &__title {
+      text-align: center;
+      justify-content: center;
+      height: 100%;
+
+      div {
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        width: 18%;
+      }
+    }
+  }
+
   .popular {
     background: none;
 
@@ -47,5 +63,95 @@
   }
   .productButton {
     display: none;
+  }
+}
+
+@media screen and(max-width:320px) {
+  .productDetail {
+    .breadcrumbs {
+      &__item {
+        display: block;
+        text-align: center;
+        font-size: 14px;
+        padding-inline: 1rem;
+      }
+
+      &__title {
+        padding-top: 1rem;
+        h1 {
+          font-size: 20px;
+        }
+        div {
+          opacity: 0.2;
+          width: 10%;
+        }
+      }
+    }
+
+    .detail {
+      overflow: hidden;
+      padding: 1rem;
+
+      &__wrapper {
+        flex-direction: column;
+        padding: 0;
+
+        &__item {
+          &--a {
+            margin-bottom: 1.5rem;
+            img {
+              width: 100%;
+              padding: 0;
+            }
+          }
+
+          &--b {
+            flex-direction: row;
+            overflow: hidden;
+
+            label {
+              margin: 0.5rem;
+            }
+          }
+
+          &--c {
+            margin-left: 0.5rem;
+
+            h1 {
+              font-size: 36px;
+            }
+
+            &__valueCart {
+              &__wrapper {
+                display: flex;
+                flex-direction: column;
+
+                &--buttonWrapper {
+                  margin-bottom: 2em;
+                  width: 10em;
+                }
+
+                &--addCart {
+                  margin: 0;
+                  height: 3em;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .tabs {
+      display: none;
+    }
+
+    .productHover {
+      margin-left: 0.8em;
+
+      &:not(:first-child) {
+        margin-left: 1.8rem;
+      }
+    }
   }
 }

@@ -7,6 +7,7 @@ import Homepage from "./components/pages/Homepage";
 import CategoryLanding from "./components/pages/Category";
 import ProductDetailPage from "./components/pages/ProductDetail";
 import Benefits from "./components/shared-components/Benefits";
+import ErrorPage from "./components/pages/404";
 import "./App.scss";
 
 //router yapisi
@@ -18,6 +19,9 @@ function App() {
         <div className="App">
           <Header />
           <Switch>
+            <Route Path="/404">
+              <ErrorPage />
+            </Route>
             <Route Path="/productdetail">
               <ProductDetailPage />
             </Route>
