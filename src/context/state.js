@@ -16,8 +16,9 @@ export function AppWrapper({ children }) {
   const [popularItemsSlicer, setPopularItemsSlicer] = useState(8);
   const [isLoginShow, setIsLoginShow] = useState(false);
   const [isColorClicked, setIsColorClicked] = useState(false);
+  const [showLogin, setShowLogin] = useState(false);
 
-  const [productData, setProductData] = useState([
+  const [productData] = useState([
     {
       id: 1,
       image: ProductImages.product1,
@@ -174,6 +175,8 @@ export function AppWrapper({ children }) {
     isLoginHandler,
     isColorClicked,
     isColorHandler,
+    setShowLogin,
+    showLogin,
   };
 
   return (

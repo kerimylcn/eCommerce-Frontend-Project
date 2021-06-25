@@ -1,6 +1,8 @@
 import Navigation from "../../shared-components/Navigation";
+import Login from "../../shared-components/Login";
 import Logo from "../../../assets/images/logo.png";
 import { Search, User, Heart, Bag } from "../../../assets/icons/SVG";
+
 import { useAppContext } from "../../../context/state";
 import { HamburgerOpen } from "../../../assets/icons/SVG";
 import "./header.scss";
@@ -43,7 +45,10 @@ const Header = () => {
         <li className="header__icons--item">
           <Search width={10} />
         </li>
-        <li className="header__icons--item">
+        <li
+          className="header__icons--item"
+          onClick={() => state.setShowLogin(true)}
+        >
           <User />
         </li>
         <li className="header__icons--item--fav">
@@ -71,6 +76,21 @@ const Header = () => {
           </div>
         </li>
       </ul>
+      <div
+        className="login"
+        style={state.showLogin ? { display: "flex" } : { display: "none" }}
+      >
+        <div
+          style={{
+            position: "absolute",
+            width: "100%",
+            height: "100%",
+            zIndex: "5",
+          }}
+          onClick={() => state.setShowLogin(false)}
+        ></div>
+        <Login />
+      </div>
     </header>
   );
 };
