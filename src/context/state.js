@@ -147,7 +147,17 @@ export function AppWrapper({ children }) {
     };
     window.addEventListener("resize", handleResize);
   }, []);
-  /////
+
+  //tracks ESC event to close login modal
+  useEffect(() => {
+    const closeLogin = (e) => {
+      if (e.keyCode === 27) {
+        setShowLogin(false);
+      }
+    };
+    window.addEventListener("keydown", closeLogin);
+    return () => window.removeEventListener("keydown", closeLogin);
+  }, []);
 
   let sharedState = {
     favorites,
