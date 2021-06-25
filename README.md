@@ -39,16 +39,16 @@ An eCommerce Frontend Project that given as task by OSF Academy Instructors.
   - [x] Filters (select design arrow)
         (responsive)
 
-- [ ] **PRODUCT DETAILED PAGE**
+- [x] **PRODUCT DETAILED PAGE**
 
-  - [ ] Product Image
-  - [ ] Product Details
-  - [ ] Tabs
+  - [x] Product Image
+  - [x] Product Details
+  - [x] Tabs
 
 - [ ] **NON-PRODUCT PAGES**
 
-  - [ ] 404 Page
-  - [ ] Log in Dialog
+  - [x] 404 Page
+  - [x] Log in Dialog
   - [ ] Cookies Policy
 
 - [ ] **BONUS TASKS**
