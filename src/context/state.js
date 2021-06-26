@@ -17,6 +17,7 @@ export function AppWrapper({ children }) {
   const [isLoginShow, setIsLoginShow] = useState(false);
   const [isColorClicked, setIsColorClicked] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
+  const [size, setSize] = useState(window.innerWidth);
 
   const [productData] = useState([
     {
@@ -108,6 +109,22 @@ export function AppWrapper({ children }) {
       message: true,
     },
   ]);
+  const cookieStorage = {
+    getItem: (key) => {
+      const cookies = document.cookie
+        .split(";")
+        .map((cookie) => cookie.split("="))
+        .reduce((acc, [key, value]) => ({ ...acc, [key.trim()]: value }), {});
+      return cookies[key];
+    },
+    setItem: (key, value) => {
+      document.cookie = `${key} = ${value}`;
+    },
+  };
+  const storageType = cookieStorage;
+  const consentPropertyName = "jdc_consent";
+  const shouldShowPopup = () => !storageType.getItem(consentPropertyName);
+  const saveToStorage = () => storageType.setItem(consentPropertyName, true);
 
   const hamburgerHandler = () => setHamburger(!hamburger);
   const servicesHandler = () => setServices(!services);
@@ -118,8 +135,6 @@ export function AppWrapper({ children }) {
   const footerAboutHandler = () => setFooterAbout(!footerAbout);
   const isLoginHandler = () => setIsLoginShow(!isLoginShow);
   const isColorHandler = () => setIsColorClicked(!isColorClicked);
-
-  const [size, setSize] = useState(window.innerWidth);
 
   // Tracks window size and closes hamburger menu and services sub
   useEffect(() => {
@@ -148,7 +163,7 @@ export function AppWrapper({ children }) {
     window.addEventListener("resize", handleResize);
   }, []);
 
-  //tracks ESC event to close login modal
+  //Listens ESC event to close login modal
   useEffect(() => {
     const closeLogin = (e) => {
       if (e.keyCode === 27) {
@@ -187,6 +202,9 @@ export function AppWrapper({ children }) {
     isColorHandler,
     setShowLogin,
     showLogin,
+    saveToStorage,
+    storageType,
+    cookieStorage,
   };
 
   return (

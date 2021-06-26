@@ -8,6 +8,7 @@ import CategoryLanding from "./components/pages/Category";
 import ProductDetailPage from "./components/pages/ProductDetail";
 import Benefits from "./components/shared-components/Benefits";
 import ErrorPage from "./components/pages/404";
+import CookieConsent from "./components/shared-components/CookieConsent";
 import "./App.scss";
 
 //router yapisi
@@ -33,6 +34,7 @@ function App() {
             </Route>
           </Switch>
           <Benefits />
+          <CookieConsent />
           <Footer />
         </div>
       </AppWrapper>
