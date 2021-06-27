@@ -4,20 +4,22 @@
   background: #45413e;
   &__item {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+
+    align-items: center;
     width: 100%;
     &:not(:last-child) {
       margin-right: 3rem;
     }
 
     svg {
-      margin: 0 4rem 0 0;
-      width: 40%;
+      width: 1em;
+      height: 1em;
+      font-size: 6em;
     }
 
     & > div {
       hyphens: auto;
+      width: 70%;
 
       h3 {
         margin-top: 0;
@@ -31,7 +33,7 @@
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 820px) {
   .benefits {
     flex-direction: column;
     padding: 2rem;
@@ -59,6 +61,16 @@
           margin-right: 1rem;
         }
       }
+    }
+  }
+}
+
+@media screen and(min-width: 821px) {
+  .benefits__item svg {
+    margin-right: 2rem;
+
+    div {
+      width: 50%;
     }
   }
 }
