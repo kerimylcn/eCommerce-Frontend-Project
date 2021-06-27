@@ -22,7 +22,7 @@
       margin: 0;
       overflow: hidden;
       left: 0;
-      transition: margin 0.8s ease-in;
+      transition: transform 0.8s ease-in;
     }
 
     &--item1 {
@@ -198,13 +198,19 @@
   }
 
   &__navigation {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    list-style: none;
-    position: absolute;
-    left: 28rem;
-    bottom: 6rem;
+    &__wrapper {
+      position: absolute;
+      width: 100%;
+      bottom: 6rem;
+      display: flex;
+      justify-content: center;
+      &--bar {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        list-style: none;
+      }
+    }
   }
 
   &__side {
@@ -264,7 +270,7 @@
   }
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 320px) {
   .carousel {
     &__container {
       height: 450px;
@@ -282,6 +288,10 @@
 
     &__banner {
       width: 72%;
+
+      &__container {
+        width: 100%;
+      }
 
       &--wrapper {
         height: 385px;
@@ -382,38 +392,136 @@
   }
 }
 
-@media (min-width: 769px) and (max-width: 1280px) {
+@media (min-width: 321px) and (max-width: 768px) {
+  .carousel {
+    &__banner {
+      &__container {
+        width: 100%;
+      }
+
+      &--item1 {
+        width: 33.4%;
+        div {
+          padding-left: 2rem;
+        }
+        h1 {
+          width: 55%;
+          font-size: 24px;
+        }
+        p {
+          width: 13rem;
+          margin-top: 2rem;
+        }
+
+        div {
+          a {
+            button {
+              margin-top: 0.2rem;
+              padding: 0.5rem;
+            }
+          }
+        }
+      }
+      &--item2 {
+        width: 33.4%;
+        h1 {
+          width: 55%;
+          font-size: 24px;
+        }
+
+        p {
+          width: 13rem;
+          margin-top: 2rem;
+        }
+
+        div {
+          a {
+            button {
+              margin-top: 0.2rem;
+              padding: 0.5rem;
+            }
+          }
+        }
+      }
+      &--item3 {
+        width: 33.4%;
+        div {
+          padding-right: 2rem;
+        }
+        h1 {
+          width: 55%;
+          font-size: 24px;
+        }
+        p {
+          width: 13rem;
+          margin-top: 2rem;
+        }
+        div {
+          a {
+            button {
+              margin-top: 0.2rem;
+              padding: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+
+    &__side {
+      &--wrapper {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
   .carousel {
     &__navigation {
       left: 25.5rem;
     }
     &__banner {
+      &--wrapper {
+        width: 302%;
+      }
       &__container {
-        margin-right: 1rem;
-        width: 900px;
+        margin-right: 2rem;
       }
       &--item1 {
-        div {
-          margin-right: 5rem;
+        h1 {
+          width: 50%;
+
+          font-size: 26px;
         }
+
         img {
-          width: 90%;
+          width: 100%;
         }
       }
       &--item2 {
+        h1 {
+          width: 50%;
+
+          font-size: 26px;
+        }
         div {
-          margin-right: 5rem;
+          margin-right: 0rem;
         }
         img {
-          width: 90%;
+          width: 100%;
         }
       }
       &--item3 {
+        h1 {
+          width: 50%;
+
+          font-size: 26px;
+        }
         div {
-          margin-right: 5rem;
+          margin-right: 0rem;
         }
         img {
-          width: 90%;
+          width: 100%;
         }
       }
     }

@@ -25,27 +25,17 @@ const CarouselBanner = () => {
         <div
           className="carousel__banner--wrapper"
           style={
-            navigationValue === 0 && state.size > 322
-              ? { marginLeft: "0" }
-              : navigationValue === 1 && state.size > 322
-              ? { marginLeft: "-62.5rem" }
-              : navigationValue === 2 && state.size > 322
-              ? { marginLeft: "-125rem" }
-              : navigationValue === 3 && state.size > 322
-              ? { marginLeft: "0" }
-              : navigationValue === 4 && state.size > 322
-              ? { marginLeft: "0" }
-              : navigationValue === 0 && state.size <= 322
-              ? { marginLeft: "0" }
-              : navigationValue === 1 && state.size <= 322
-              ? { marginLeft: "-16.1rem" }
-              : navigationValue === 2 && state.size <= 322
-              ? { marginLeft: "-32.2rem" }
-              : navigationValue === 3 && state.size <= 322
-              ? { marginLeft: "0" }
-              : navigationValue === 4 && state.size <= 322
-              ? { marginLeft: "0" }
-              : { color: "black" }
+            navigationValue === 0
+              ? { transform: "translate(0)" }
+              : navigationValue === 1
+              ? { transform: "translate(-33.4%)" }
+              : navigationValue === 2
+              ? { transform: "translate(-66.8%)" }
+              : navigationValue === 3
+              ? { transform: "translate(0)" }
+              : navigationValue === 4
+              ? { transform: "translate(0)" }
+              : null
           }
         >
           <div className="carousel__banner--item1">
@@ -79,48 +69,50 @@ const CarouselBanner = () => {
             <img src={BannerImages.banner3}></img>
           </div>
         </div>
-        <ul className="carousel__navigation">
-          <li>
-            <input
-              type="radio"
-              name="foo"
-              value={0}
-              onClick={(e) => onClickHandler(e)}
-            ></input>
-          </li>
-          <li>
-            <input
-              type="radio"
-              name="foo"
-              value={1}
-              onClick={(e) => onClickHandler(e)}
-            ></input>
-          </li>
-          <li>
-            <input
-              type="radio"
-              name="foo"
-              value={2}
-              onClick={(e) => onClickHandler(e)}
-            ></input>
-          </li>
-          <li>
-            <input
-              type="radio"
-              name="foo"
-              value={3}
-              onClick={(e) => onClickHandler(e)}
-            ></input>
-          </li>
-          <li>
-            <input
-              type="radio"
-              name="foo"
-              value={4}
-              onClick={(e) => onClickHandler(e)}
-            ></input>
-          </li>
-        </ul>
+        <div className="carousel__navigation__wrapper">
+          <ul className="carousel__navigation__wrapper--bar">
+            <li>
+              <input
+                type="radio"
+                name="foo"
+                value={0}
+                onClick={(e) => onClickHandler(e)}
+              ></input>
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="foo"
+                value={1}
+                onClick={(e) => onClickHandler(e)}
+              ></input>
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="foo"
+                value={2}
+                onClick={(e) => onClickHandler(e)}
+              ></input>
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="foo"
+                value={3}
+                onClick={(e) => onClickHandler(e)}
+              ></input>
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="foo"
+                value={4}
+                onClick={(e) => onClickHandler(e)}
+              ></input>
+            </li>
+          </ul>
+        </div>
       </div>
       <div className="carousel__side--wrapper">
         <div className="carousel__side--discount">
