@@ -6,8 +6,6 @@ import BannerImages from "../../../assets/images/banner/bannerimages";
 
 import "./carouselbanner.scss";
 
-// 720 PX left
-
 const CarouselBanner = () => {
   const state = useAppContext();
   const [navigationValue, setNavigationValue] = useState(0);
