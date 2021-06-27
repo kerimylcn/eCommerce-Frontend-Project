@@ -1,5 +1,5 @@
 import { ErrorIcon, Search } from "../../../assets/icons/SVG";
-
+import { Link } from "react-router-dom";
 import "./error.scss";
 
 const Error = () => {
@@ -20,7 +20,7 @@ const Error = () => {
           commodo ligula eget dolor. Aenean massa.
         </p>
 
-        <span>Go back to Homepage</span>
+        <Link to="/">Go back to Homepage</Link>
 
         <div className="error__wrapper--rightColumn--searchBar">
           <h2>Search our site</h2>

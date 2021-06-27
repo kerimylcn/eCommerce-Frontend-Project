@@ -6,12 +6,9 @@ import Footer from "./components/layouts/Footer";
 import Homepage from "./components/pages/Homepage";
 import CategoryLanding from "./components/pages/Category";
 import ProductDetailPage from "./components/pages/ProductDetail";
-import Benefits from "./components/shared-components/Benefits";
 import ErrorPage from "./components/pages/404";
 import CookieConsent from "./components/shared-components/CookieConsent";
 import "./App.scss";
-
-//router yapisi
 
 function App() {
   return (
@@ -20,10 +17,10 @@ function App() {
         <div className="App">
           <Header />
           <Switch>
-            <Route Path="/404">
+            <Route path="/404">
               <ErrorPage />
             </Route>
-            <Route Path="/productdetail">
+            <Route path="/productdetail">
               <ProductDetailPage />
             </Route>
             <Route path="/category">
@@ -33,7 +30,6 @@ function App() {
               <Homepage />
             </Route>
           </Switch>
-          <Benefits />
           <CookieConsent />
           <Footer />
         </div>

@@ -1,5 +1,6 @@
 import "./producttile.scss";
 import { Plus, Like } from "../../../assets/icons/SVG";
+import { Link } from "react-router-dom";
 
 const ProductTile = (props) => {
   return props.message ? (
@@ -33,7 +34,10 @@ const ProductTile = (props) => {
     <div className="productButton">
       <img src={props.image} alt={props.name} />
       <div className="productButton__alt">
-        <p>{props.name}</p>
+        <Link to="/productdetail">
+          {" "}
+          <p>{props.name}</p>
+        </Link>
         <button>
           <div>
             <span>{props.price}</span>

@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { useAppContext } from "../../../context/state";
+import { Undo } from "../../../assets/icons/SVG";
 import ProductTile from "../../shared-components/ProductTile";
 import "./popularitems.scss";
 
-// LOAD MORE BUTTON
 // border width
-// Product Tile1
+
 // favid will match, if it's already in it then it will remove it.
 // style nav buttons
 //svg load morem
@@ -106,7 +106,9 @@ const PopularItems = (props) => {
         </li>
       </ul>
       <div className="popular__button--wrapper">
-        <button>LOAD MORE</button>
+        <button>
+          LOAD MORE <Undo />
+        </button>
       </div>
     </div>
   );

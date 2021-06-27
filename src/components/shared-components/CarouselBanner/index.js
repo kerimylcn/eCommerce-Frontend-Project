@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FacebookBlue } from "../../../assets/icons/SVG";
 import { useAppContext } from "../../../context/state";
+import { Link } from "react-router-dom";
 import BannerImages from "../../../assets/images/banner/bannerimages";
 
 import "./carouselbanner.scss";
@@ -51,7 +52,9 @@ const CarouselBanner = () => {
             <div>
               <h1>{header}</h1>
               <p>{paragraph}</p>
-              <button> VIEW MORE</button>
+              <Link to="category">
+                <button> VIEW MORE</button>
+              </Link>
             </div>
             <img src={BannerImages.banner1}></img>
           </div>
@@ -59,7 +62,9 @@ const CarouselBanner = () => {
             <div>
               <h1>{header}</h1>
               <p>{paragraph}</p>
-              <button> VIEW MORE</button>
+              <Link to="category">
+                <button> VIEW MORE</button>
+              </Link>
             </div>
             <img src={BannerImages.banner2}></img>
           </div>
@@ -67,7 +72,9 @@ const CarouselBanner = () => {
             <div>
               <h1>{header}</h1>
               <p>{paragraph}</p>
-              <button> VIEW MORE</button>
+              <Link to="category">
+                <button> VIEW MORE</button>
+              </Link>
             </div>
             <img src={BannerImages.banner3}></img>
           </div>

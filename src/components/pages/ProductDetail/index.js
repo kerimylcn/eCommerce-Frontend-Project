@@ -3,8 +3,10 @@ import DetailedImages from "../../../assets/images/productdetail/detailedImages.
 import Tabs from "../../shared-components/Tabs";
 import PopularItems from "../../layouts/Popular Items";
 import Breadcrumbs from "../../shared-components/Breadcrumbs";
+import Benefits from "../../shared-components/Benefits";
 
 import "./productdetail.scss";
+
 //720 p left
 const ProductDetailPage = () => {
   return (
@@ -27,6 +29,7 @@ const ProductDetailPage = () => {
       />
       <Tabs />
       <PopularItems sliceValue={5} />
+      <Benefits />
     </div>
   );
 };

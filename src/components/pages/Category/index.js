@@ -17,7 +17,6 @@ const CategoryLanding = () => {
       <Filters />
       <Results />
       <FeaturedProducts />
-      <Tabs />
     </div>
   );
 };

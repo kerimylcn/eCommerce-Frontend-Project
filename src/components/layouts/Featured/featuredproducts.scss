@@ -8,6 +8,9 @@
   height: 575px;
   color: white;
 
+  &--header {
+    margin-bottom: 0;
+  }
   &--items {
     display: flex;
     width: 83rem;

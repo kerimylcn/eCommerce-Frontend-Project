@@ -8,17 +8,20 @@
 
   &__banner {
     &__container {
-      width: 1000px;
+      width: 72%;
       height: 100%;
       position: relative;
       overflow: hidden;
     }
 
     &--wrapper {
-      width: 3000px;
-      height: 500px;
-      border-radius: 4rem;
       display: flex;
+      position: relative;
+      width: 300%;
+      height: 500px;
+      margin: 0;
+      overflow: hidden;
+      left: 0;
       transition: margin 0.8s ease-in;
     }
 
@@ -28,11 +31,9 @@
       flex-direction: column;
       justify-content: center;
       border-radius: 0.5rem;
-      width: 1000px;
-      height: 100%; // background: url(../../../assets//images/banner/banner1.png);
-      // background-size: 1500px 750px;
-      // background-repeat: no-repeat;
-      // background-position: -100px -200px;
+      width: 33.7%;
+      height: 100%;
+
       img {
         position: absolute;
         z-index: -1;
@@ -85,12 +86,8 @@
       justify-content: center;
       text-align: center;
       border-radius: 0.5rem;
-      width: 1000px;
+      width: 33.7%;
       height: 100%;
-      // background: url(../../../assets//images/banner/banner2.png);
-      // background-size: 1500px 750px;
-      // background-repeat: no-repeat;
-      // background-position: -100px -200px;
 
       img {
         position: absolute;
@@ -147,12 +144,8 @@
       justify-content: flex-end;
       text-align: right;
       border-radius: 0.5rem;
-      width: 1000px;
+      width: 33.7%;
       height: 100%;
-      // background: url(../../../assets//images/banner/banner3.png);
-      // background-size: 1500px 750px;
-      // background-repeat: no-repeat;
-      // background-position: -100px -200px;
 
       img {
         position: absolute;
@@ -271,7 +264,7 @@
   }
 }
 
-@media (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 479px) {
   .carousel {
     &__container {
       height: 450px;
@@ -288,14 +281,14 @@
     }
 
     &__banner {
-      width: 500px;
+      width: 72%;
 
       &--wrapper {
         height: 385px;
       }
 
       &--item1 {
-        width: 16.1rem;
+        width: 33.7%;
         border-radius: 0.5rem;
         overflow: hidden;
 
@@ -327,7 +320,7 @@
       }
 
       &--item2 {
-        width: 16.1rem;
+        width: 33.7%;
         border-radius: 0.5rem;
         overflow: hidden;
 
@@ -355,7 +348,7 @@
       }
 
       &--item3 {
-        width: 16.1rem;
+        width: 33.7%;
         border-radius: 0.5rem;
         overflow: hidden;
 
@@ -389,12 +382,7 @@
   }
 }
 
-@media (min-width: 480px) and (max-width: 1280px) {
-  &__navigation {
-  }
-}
-
-@media (min-width: 721px) and (max-width: 1280px) {
+@media (min-width: 769px) and (max-width: 1280px) {
   .carousel {
     &__navigation {
       left: 25.5rem;

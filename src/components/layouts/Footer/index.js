@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useAppContext } from "../../../context/state.js";
 import {
   Facebook,
@@ -8,6 +9,7 @@ import {
   ArrowDown,
 } from "../../../assets/icons/SVG.js";
 import "./footer.scss";
+import IconBar from "../../shared-components/IconBar/index.js";
 
 const Footer = () => {
   const state = useAppContext();
@@ -129,7 +131,7 @@ const Footer = () => {
                       className="footer__container__section--item"
                       key={index}
                     >
-                      <a href="##">{categorie}</a>
+                      <Link to="/404">{categorie}</Link>
                     </li>
                   ))}
                 </ul>
@@ -165,7 +167,7 @@ const Footer = () => {
                       className="footer__container__section--item"
                       key={index}
                     >
-                      <a href="##">{info}</a>
+                      <Link to="/404">{info}</Link>
                     </li>
                   ))}
                 </ul>
@@ -197,6 +199,9 @@ const Footer = () => {
             </ul>
           </li>
         </li>
+        <div className="footer__icons">
+          <IconBar />
+        </div>
       </ul>
     </footer>
   );

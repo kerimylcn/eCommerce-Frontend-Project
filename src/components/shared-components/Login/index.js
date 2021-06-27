@@ -5,7 +5,6 @@ import { Eye } from "../../../assets/icons/SVG";
 import "./login.scss";
 
 const Login = () => {
-  const state = useAppContext();
   const [isPswVisible, setIsPswVisible] = useState(false);
   return (
     <form className="login__form">

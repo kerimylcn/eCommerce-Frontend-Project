@@ -2,8 +2,10 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  text-decoration: none;
 }
 .App {
+  position: relative;
   display: flex;
   flex-direction: column;
 }

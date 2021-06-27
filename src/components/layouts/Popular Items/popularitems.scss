@@ -60,6 +60,9 @@
       align-items: center;
 
       button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 15rem;
         font-size: 14px;
         background: #262a32;
@@ -68,6 +71,17 @@
         border-radius: 10rem;
         padding: 0.5rem;
         cursor: pointer;
+        padding-left: 2rem;
+
+        .undo {
+          width: 1em;
+          height: 1em;
+          font-size: 1.8rem;
+          fill: white;
+          margin-left: 0.4rem;
+          transform: rotate(240deg);
+          margin-bottom: 0.2rem;
+        }
 
         &:active {
           outline: 2px solid white;

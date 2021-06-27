@@ -1,7 +1,7 @@
 //768px view should done
-//NAVIGATION_1 left
 
 import Image from "../../../assets/images/dropdownitem.png";
+import { Link } from "react-router-dom";
 import { ArrowDown } from "../../../assets/icons/SVG";
 import { useAppContext } from "../../../context/state";
 import "./navigation.scss";
@@ -97,7 +97,9 @@ const Navigation = () => {
                   }
                 >
                   {services.ProductCategories.map((product, index) => (
-                    <li key={index}>{product}</li>
+                    <Link to="/404">
+                      <li key={index}>{product}</li>
+                    </Link>
                   ))}
                 </ul>
               </li>
@@ -124,7 +126,9 @@ const Navigation = () => {
                   }
                 >
                   {services.Sale.map((sale, index) => (
-                    <li key={index}>{sale}</li>
+                    <Link to="/404">
+                      <li key={index}>{sale}</li>
+                    </Link>
                   ))}
                 </ul>
               </li>

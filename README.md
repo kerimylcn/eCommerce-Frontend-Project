@@ -18,8 +18,8 @@ An eCommerce Frontend Project that given as task by OSF Academy Instructors.
 
 - [x] **GLOBAL ELEMENTS**
 
-  - [x] Header (HEADER_3 LEFT)
-  - [x] Navigation (EN, $US SELECTS WILL BE ADDED)
+  - [x] Header
+  - [x] Navigation
   - [x] Navigation on Mobile
   - [x] Footer
 
@@ -29,13 +29,13 @@ An eCommerce Frontend Project that given as task by OSF Academy Instructors.
   - [x] Production Tile 2
   - [x] Production Tile 3
   - [x] Production Tile 4
-        (PRODUCT_TILE_1 left - detail page)
+        (productButton design + buy now button)
         (5.2 LOAD MORE WILL GET 4 MORE ITEMS BY AJAX REQUEST)
         (CAROUSEL 720p left)
 
 - [x] **HOMEPAGE**
 
-  - [x] Breadcrumbs(home router to /home need to be done)
+  - [x] Breadcrumbs(add to cart only value)
   - [x] Filters (select design arrow)
         (responsive)
 
@@ -45,13 +45,8 @@ An eCommerce Frontend Project that given as task by OSF Academy Instructors.
   - [x] Product Details
   - [x] Tabs
 
-- [ ] **NON-PRODUCT PAGES**
+- [x] **NON-PRODUCT PAGES**
 
   - [x] 404 Page
   - [x] Log in Dialog
-  - [ ] Cookies Policy
-
-- [ ] **BONUS TASKS**
-  - [ ] Countdown page
-  - [ ] Cart Page
-  - [ ] Print Page
+  - [x] Cookies Policy
