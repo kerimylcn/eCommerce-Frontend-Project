@@ -41,51 +41,49 @@ const FeaturedProducts = () => {
       </div>
 
       <div className="products__container--items">
-        <div
-          className="products__container--items--container"
-          style={
-            navigationValue === false && state.size > 1281
-              ? { marginLeft: "0" }
-              : navigationValue === false && state.size > 1281
-              ? { marginLeft: "-62rem" }
-              : navigationValue === false && state.size < 1281
-              ? { marginLeft: "2.5rem" }
-              : { marginLeft: "-62.2rem" }
-          }
-        >
-          <div style={{ display: "flex" }}>
-            {state.productData.slice(0, 5).map((product) => (
-              <ProductTile
-                id={product.id}
-                image={product.image}
-                name={product.name}
-                time={product.time}
-                price={`Awesome`}
-                button={product.button}
-                hover={product.hover}
-                icon={product.icon}
-                message={product.message}
-                cartHandler={() => ""}
-                favHandler={() => ""}
-              />
-            ))}
-          </div>
-          <div style={{ display: "flex" }}>
-            {state.productData.slice(4, 9).map((product) => (
-              <ProductTile
-                id={product.id}
-                image={product.image}
-                name={product.name}
-                time={product.time}
-                price={`Awesome`}
-                button={product.button}
-                hover={product.hover}
-                icon={product.icon}
-                message={product.message}
-                cartHandler={() => ""}
-                favHandler={() => ""}
-              />
-            ))}
+        <div className="products__container--items--wrapper">
+          <div
+            className="products__container--items--container"
+            style={
+              navigationValue === false
+                ? { transform: "translate(0%)" }
+                : { transform: "translate(-50%)" }
+            }
+          >
+            <div style={{ display: "flex" }}>
+              {state.productData.slice(0, 5).map((product) => (
+                <ProductTile
+                  id={product.id}
+                  image={product.image}
+                  name={product.name}
+                  time={product.time}
+                  price={`Awesome`}
+                  button={product.button}
+                  hover={product.hover}
+                  icon={product.icon}
+                  message={product.message}
+                  cartHandler={() => ""}
+                  favHandler={() => ""}
+                />
+              ))}
+            </div>
+            <div style={{ display: "flex" }}>
+              {state.productData.slice(4, 9).map((product) => (
+                <ProductTile
+                  id={product.id}
+                  image={product.image}
+                  name={product.name}
+                  time={product.time}
+                  price={`Awesome`}
+                  button={product.button}
+                  hover={product.hover}
+                  icon={product.icon}
+                  message={product.message}
+                  cartHandler={() => ""}
+                  favHandler={() => ""}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>

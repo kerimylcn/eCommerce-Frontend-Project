@@ -104,11 +104,21 @@
   }
 }
 
-@media screen and(max-width: 320px) {
+@media screen and(max-width: 799px) {
   .filter {
     &__container {
       flex-direction: column;
       align-items: center;
+    }
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .filter {
+    &__container {
+      &__wrapper {
+        margin-inline: 2rem;
+      }
     }
   }
 }

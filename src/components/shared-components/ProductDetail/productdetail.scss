@@ -213,4 +213,33 @@
       }
     }
   }
+
+  &__navigation__wrapper--bar {
+    display: none;
+  }
+}
+@media screen and(max-width: 375px) {
+  .detail__sliderContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+
+    &--wrapper {
+      width: 83%;
+      overflow: hidden;
+
+      .detail__wrapper__item--b {
+        width: 400%;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+  }
+
+  .detail__navigation__wrapper--bar {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+  }
 }

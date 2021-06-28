@@ -15,11 +15,15 @@ const ProductDetail = (props) => {
   const [price, setPrice] = useState(299.99);
   const [value, setValue] = useState(1);
   const [readMore, setReadMore] = useState(false);
+  const [navigationValue, setNavigationValue] = useState(0);
   const [selectedImage, setSelectedImage] = useState(props.imageFirst);
   const [selectedColor, setSelectedColor] = useState(0); // 0 = Dark Grey, 1 = Aqua Blue;
 
   const state = useAppContext();
 
+  const onClickHandlerSlider = (e) => {
+    return setNavigationValue(parseInt(e.target.value));
+  };
   const onClickHandlerSum = () => {
     setValue(value + 1);
     setPrice(price + 300);
@@ -41,83 +45,134 @@ const ProductDetail = (props) => {
         <div className="detail__wrapper__item--a">
           <img src={selectedImage} />
         </div>
-        <div className="detail__wrapper__item--b">
-          <label
-            for="image-select1"
-            className="detail__wrapper__item--b__thumbnail"
-          >
-            <input
-              className="detail__wrapper__item--b__thumbnail--input"
-              type="radio"
-              name="images"
-              id="image-select1"
-            ></input>
-            <div className="detail__wrapper__item--b__thumbnail--sImages">
-              <img
-                onClick={() => (
-                  setSelectedImage(props.imageFirst), setSelectedColor(0)
-                )}
-                src={props.imageFirstSmall}
-              />
+        <div className="detail__sliderContainer">
+          <div className="detail__sliderContainer--wrapper">
+            <div
+              className="detail__wrapper__item--b"
+              style={
+                navigationValue === 2
+                  ? { transform: "translate(-9.5%)" }
+                  : navigationValue === 3
+                  ? { transform: "translate(-9.5%)" }
+                  : { transform: "translate(-1%)" }
+              }
+            >
+              <label
+                for="image-select1"
+                className="detail__wrapper__item--b__thumbnail"
+              >
+                <input
+                  className="detail__wrapper__item--b__thumbnail--input"
+                  type="radio"
+                  name="images"
+                  id="image-select1"
+                ></input>
+                <div className="detail__wrapper__item--b__thumbnail--sImages">
+                  <img
+                    onClick={() => (
+                      setSelectedImage(props.imageFirst), setSelectedColor(0)
+                    )}
+                    src={props.imageFirstSmall}
+                  />
+                </div>
+              </label>
+              <label
+                for="image-select2"
+                className="detail__wrapper__item--b__thumbnail"
+              >
+                <input
+                  className="detail__wrapper__item--b__thumbnail--input"
+                  type="radio"
+                  name="images"
+                  id="image-select2"
+                ></input>
+                <div className="detail__wrapper__item--b__thumbnail--sImages">
+                  <img
+                    onClick={() => (
+                      setSelectedImage(props.imageFirstBehind),
+                      setSelectedColor(0)
+                    )}
+                    src={props.imageFirstSmallBehind}
+                  />
+                </div>
+              </label>
+              <label
+                for="image-select3"
+                className="detail__wrapper__item--b__thumbnail"
+              >
+                <input
+                  className="detail__wrapper__item--b__thumbnail--input"
+                  type="radio"
+                  name="images"
+                  id="image-select3"
+                ></input>
+                <div className="detail__wrapper__item--b__thumbnail--sImages">
+                  <img
+                    onClick={() => (
+                      setSelectedImage(props.imageSecond), setSelectedColor(1)
+                    )}
+                    src={props.imageSecondSmall}
+                  />
+                </div>
+              </label>
+              <label
+                for="image-select4"
+                className="detail__wrapper__item--b__thumbnail"
+              >
+                <input
+                  className="detail__wrapper__item--b__thumbnail--input"
+                  type="radio"
+                  name="images"
+                  id="image-select4"
+                ></input>
+                <div className="detail__wrapper__item--b__thumbnail--sImages">
+                  <img
+                    onClick={() => (
+                      setSelectedImage(props.imageSecondBehind),
+                      setSelectedColor(1)
+                    )}
+                    src={props.imageSecondSmallBehind}
+                  />
+                </div>
+              </label>
             </div>
-          </label>
-          <label
-            for="image-select2"
-            className="detail__wrapper__item--b__thumbnail"
-          >
-            <input
-              className="detail__wrapper__item--b__thumbnail--input"
-              type="radio"
-              name="images"
-              id="image-select2"
-            ></input>
-            <div className="detail__wrapper__item--b__thumbnail--sImages">
-              <img
-                onClick={() => (
-                  setSelectedImage(props.imageFirstBehind), setSelectedColor(0)
-                )}
-                src={props.imageFirstSmallBehind}
-              />
-            </div>
-          </label>
-          <label
-            for="image-select3"
-            className="detail__wrapper__item--b__thumbnail"
-          >
-            <input
-              className="detail__wrapper__item--b__thumbnail--input"
-              type="radio"
-              name="images"
-              id="image-select3"
-            ></input>
-            <div className="detail__wrapper__item--b__thumbnail--sImages">
-              <img
-                onClick={() => (
-                  setSelectedImage(props.imageSecond), setSelectedColor(1)
-                )}
-                src={props.imageSecondSmall}
-              />
-            </div>
-          </label>
-          <label
-            for="image-select4"
-            className="detail__wrapper__item--b__thumbnail"
-          >
-            <input
-              className="detail__wrapper__item--b__thumbnail--input"
-              type="radio"
-              name="images"
-              id="image-select4"
-            ></input>
-            <div className="detail__wrapper__item--b__thumbnail--sImages">
-              <img
-                onClick={() => (
-                  setSelectedImage(props.imageSecondBehind), setSelectedColor(1)
-                )}
-                src={props.imageSecondSmallBehind}
-              />
-            </div>
-          </label>
+          </div>
+        </div>
+        <div className="detail__navigation__wrapper">
+          <ul className="detail__navigation__wrapper--bar">
+            <li>
+              <input
+                type="radio"
+                name="foo"
+                value={0}
+                onClick={(e) => onClickHandlerSlider(e)}
+              ></input>
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="foo"
+                value={1}
+                onClick={(e) => onClickHandlerSlider(e)}
+              ></input>
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="foo"
+                value={2}
+                onClick={(e) => onClickHandlerSlider(e)}
+              ></input>
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="foo"
+                value={3}
+                onClick={(e) => onClickHandlerSlider(e)}
+              ></input>
+            </li>
+          </ul>
         </div>
         <div className="detail__wrapper__item--c">
           <h1>${price}</h1>
