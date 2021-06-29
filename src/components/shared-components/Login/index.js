@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useAppContext } from "../../../context/state";
 import { Eye } from "../../../assets/icons/SVG";
 
 import "./login.scss";

@@ -284,6 +284,10 @@
     &__navigation {
       left: 4.5rem;
       bottom: 0.8rem;
+
+      &__wrapper {
+        bottom: 2rem;
+      }
     }
 
     &__banner {

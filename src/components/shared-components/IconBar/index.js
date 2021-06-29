@@ -9,7 +9,10 @@ const IconBar = () => {
       <li className="icons--item">
         <Search width={10} />
       </li>
-      <li className="icons--item" onClick={() => state.setShowLogin(true)}>
+      <li
+        className="icons--item"
+        onClick={() => (state.setShowLogin(true), window.scroll(0, 0))}
+      >
         <User />
       </li>
       <li className="icons--item--fav">

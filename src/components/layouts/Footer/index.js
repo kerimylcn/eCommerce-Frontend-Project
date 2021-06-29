@@ -177,22 +177,30 @@ const Footer = () => {
           <li className="footer__container__section--c">
             <ul>
               <li>
-                <a href="https://www.facebook.com/OSFDigital/" target="_blank">
+                <a
+                  href="https://www.facebook.com/OSFDigital/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <Facebook />
                 </a>
               </li>
               <li>
-                <a href="https://osf.digital/" target="_blank">
+                <a href="https://osf.digital/" target="_blank" rel="noreferrer">
                   <Google />
                 </a>
               </li>
               <li>
-                <a href="https://osf.digital/" target="_blank">
+                <a href="https://osf.digital/" target="_blank" rel="noreferrer">
                   <Pinterest />
                 </a>
               </li>
               <li>
-                <a href="https://twitter.com/osfdigital" target="_blank">
+                <a
+                  href="https://twitter.com/osfdigital"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <Twitter />
                 </a>
               </li>

@@ -13,7 +13,7 @@ export function AppWrapper({ children }) {
   const [footerContact, setFooterContact] = useState(true);
   const [footerCategories, setFooterCategories] = useState(true);
   const [footerAbout, setFooterAbout] = useState(true);
-  const [popularItemsSlicer, setPopularItemsSlicer] = useState(1);
+  const [popularItemsSlicer] = useState(1);
   const [isLoginShow, setIsLoginShow] = useState(false);
   const [isColorClicked, setIsColorClicked] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
@@ -123,7 +123,7 @@ export function AppWrapper({ children }) {
   };
   const storageType = cookieStorage;
   const consentPropertyName = "jdc_consent";
-  const shouldShowPopup = () => !storageType.getItem(consentPropertyName);
+
   const saveToStorage = () => storageType.setItem(consentPropertyName, true);
 
   const hamburgerHandler = () => setHamburger(!hamburger);

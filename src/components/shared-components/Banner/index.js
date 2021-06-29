@@ -1,6 +1,6 @@
 import "./banner.scss";
 import BannerImage from "../../../assets/images/banner/solobanner.png";
-//Responsive
+
 const Banner = () => {
   return (
     <div className="banner">
@@ -13,7 +13,7 @@ const Banner = () => {
           </p>
         </div>
       </div>
-      <img src={BannerImage} />
+      <img src={BannerImage} alt="OSF Banner" />
     </div>
   );
 };

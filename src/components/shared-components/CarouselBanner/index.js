@@ -1,13 +1,11 @@
 import { useState } from "react";
 import { FacebookBlue } from "../../../assets/icons/SVG";
-import { useAppContext } from "../../../context/state";
 import { Link } from "react-router-dom";
 import BannerImages from "../../../assets/images/banner/bannerimages";
 
 import "./carouselbanner.scss";
 
 const CarouselBanner = () => {
-  const state = useAppContext();
   const [navigationValue, setNavigationValue] = useState(0);
   const onClickHandler = (e) => {
     return setNavigationValue(parseInt(e.target.value));
@@ -44,7 +42,7 @@ const CarouselBanner = () => {
                 <button> VIEW MORE</button>
               </Link>
             </div>
-            <img src={BannerImages.banner1}></img>
+            <img src={BannerImages.banner1} alt="Girl"></img>
           </div>
           <div className="carousel__banner--item2">
             <div>
@@ -54,7 +52,7 @@ const CarouselBanner = () => {
                 <button> VIEW MORE</button>
               </Link>
             </div>
-            <img src={BannerImages.banner2}></img>
+            <img src={BannerImages.banner2} alt="Sea and bridge"></img>
           </div>
           <div className="carousel__banner--item3">
             <div>
@@ -64,7 +62,7 @@ const CarouselBanner = () => {
                 <button> VIEW MORE</button>
               </Link>
             </div>
-            <img src={BannerImages.banner3}></img>
+            <img src={BannerImages.banner3} alt="People working"></img>
           </div>
         </div>
         <div className="carousel__navigation__wrapper">
@@ -117,13 +115,17 @@ const CarouselBanner = () => {
           <h1>55%</h1>
           <p>SUMMER SALES </p>
         </div>
-        <div classname="carousel__side--text">
+        <div className="carousel__side--text">
           <p style={{ marginTop: "2rem" }}>Follow us on Facebook</p>
           <p style={{ fontSize: "0.9rem" }}>
             Sed ut perspiciatis unde omnis iste natus error sit
           </p>
         </div>
-        <a href="https://www.facebook.com/OSFDigital/" target="_blank">
+        <a
+          href="https://www.facebook.com/OSFDigital/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <button>
             <FacebookBlue />
             FOLLOW

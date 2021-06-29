@@ -9,11 +9,10 @@ import {
   ArrowDown,
 } from "../../../assets/icons/SVG";
 
-//product detail 2 kaldı sadece
-
 const ProductDetail = (props) => {
   const [price, setPrice] = useState(299.99);
   const [value, setValue] = useState(1);
+  const [preCart, setPreCart] = useState([]);
   const [readMore, setReadMore] = useState(false);
   const [navigationValue, setNavigationValue] = useState(0);
   const [selectedImage, setSelectedImage] = useState(props.imageFirst);
@@ -21,12 +20,16 @@ const ProductDetail = (props) => {
 
   const state = useAppContext();
 
+  const cartHandler = () => {
+    state.setCart([...state.cart, ...preCart]);
+  };
   const onClickHandlerSlider = (e) => {
     return setNavigationValue(parseInt(e.target.value));
   };
   const onClickHandlerSum = () => {
     setValue(value + 1);
     setPrice(price + 300);
+    setPreCart([...preCart, this]);
   };
   const onClickHandlerMinus = () => {
     value > 1 ? setValue(value - 1) : setValue(value);
@@ -43,7 +46,7 @@ const ProductDetail = (props) => {
     <div className="detail">
       <div className="detail__wrapper">
         <div className="detail__wrapper__item--a">
-          <img src={selectedImage} />
+          <img src={selectedImage} alt="Big version of cloth" />
         </div>
         <div className="detail__sliderContainer">
           <div className="detail__sliderContainer--wrapper">
@@ -73,6 +76,7 @@ const ProductDetail = (props) => {
                       setSelectedImage(props.imageFirst), setSelectedColor(0)
                     )}
                     src={props.imageFirstSmall}
+                    alt="Grey cloth, front angle"
                   />
                 </div>
               </label>
@@ -93,6 +97,7 @@ const ProductDetail = (props) => {
                       setSelectedColor(0)
                     )}
                     src={props.imageFirstSmallBehind}
+                    alt="Grey cloth, back angle"
                   />
                 </div>
               </label>
@@ -112,6 +117,7 @@ const ProductDetail = (props) => {
                       setSelectedImage(props.imageSecond), setSelectedColor(1)
                     )}
                     src={props.imageSecondSmall}
+                    alt="Aqua blue cloth, front angle"
                   />
                 </div>
               </label>
@@ -132,6 +138,7 @@ const ProductDetail = (props) => {
                       setSelectedColor(1)
                     )}
                     src={props.imageSecondSmallBehind}
+                    alt="Aqua blue cloth, back angle"
                   />
                 </div>
               </label>
@@ -235,7 +242,10 @@ const ProductDetail = (props) => {
                 <span>{value}</span>
                 <button onClick={() => onClickHandlerSum()}>+</button>
               </div>
-              <button className="detail__wrapper__item--c__valueCart__wrapper--addCart">
+              <button
+                className="detail__wrapper__item--c__valueCart__wrapper--addCart"
+                onClick={() => cartHandler()}
+              >
                 ADD TO CART
               </button>
             </div>
@@ -250,22 +260,30 @@ const ProductDetail = (props) => {
           <ul className="detail__wrapper__item--c--social">
             <li>Share</li>
             <li>
-              <a href="https://www.facebook.com/OSFDigital/" target="_blank">
+              <a
+                href="https://www.facebook.com/OSFDigital/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <Facebook />
               </a>
             </li>
             <li>
-              <a href="https://osf.digital/" target="_blank">
+              <a href="https://osf.digital/" target="_blank" rel="noreferrer">
                 <Google />
               </a>
             </li>
             <li>
-              <a href="https://osf.digital/" target="_blank">
+              <a href="https://osf.digital/" target="_blank" rel="noreferrer">
                 <Pinterest />
               </a>
             </li>
             <li>
-              <a href="https://twitter.com/osfdigital" target="_blank">
+              <a
+                href="https://twitter.com/osfdigital"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <Twitter />
               </a>
             </li>

@@ -27,7 +27,9 @@ const Results = () => {
           />
         ))}
       </div>
-      <button className="results--button">LOAD MORE</button>
+      <button className="results--button" onClick={() => window.scroll(0, 0)}>
+        SCROLL TO TOP
+      </button>
     </div>
   );
 };

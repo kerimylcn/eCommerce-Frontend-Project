@@ -12,13 +12,13 @@ const FeaturedProducts = () => {
   });
 
   const onClickHandlerLeft = () => {
-    return navigationValue == false
+    return navigationValue === false
       ? setNavigationValue(true)
       : setNavigationValue(false);
   };
 
   const onClickHandlerRight = () => {
-    return navigationValue == true
+    return navigationValue === true
       ? setNavigationValue(false)
       : setNavigationValue(true);
   };
