@@ -53,3 +53,20 @@
     }
   }
 }
+
+@media screen and (max-width: 680px) {
+  .cookie {
+    &__container {
+      flex-direction: column;
+
+      &__buttonSide {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 0;
+        &--close {
+          order: 1;
+        }
+      }
+    }
+  }
+}
