@@ -29,13 +29,11 @@ An eCommerce Frontend Project that given as task by OSF Academy Instructors.
   - [x] Production Tile 2
   - [x] Production Tile 3
   - [x] Production Tile 4
-        (5.2 LOAD MORE WILL GET 4 MORE ITEMS BY AJAX REQUEST)
-        (CAROUSEL 720p left)
-
+   
 - [x] **HOMEPAGE**
 
-  - [x] Breadcrumbs(add to cart only value)
-  - [x] Filters (select design arrow)
+  - [x] Breadcrumbs
+  - [x] Filters 
 
 - [x] **PRODUCT DETAILED PAGE**
 
