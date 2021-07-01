@@ -4,9 +4,6 @@ import { Undo } from "../../../assets/icons/SVG";
 import ProductTile from "../../shared-components/ProductTile";
 import "./popularitems.scss";
 
-// favid will match, if it's already in it then it will remove it.
-// style nav buttons
-
 const PopularItems = (props) => {
   const state = useAppContext();
   const [navigationValue, setNavigationValue] = useState(0);
